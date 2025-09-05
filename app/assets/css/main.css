@@ -282,7 +282,7 @@ body {
         right: 2rem;
     }
 }
-
+/* 
 .blurtext {
   position: relative;
   width: 35px;
@@ -312,6 +312,36 @@ body {
   filter: blur(10px);
   line-height: 1.9rem !important;
   transition: opacity 1000ms linear, transform 1000ms linear, filter 400ms linear, letter-spacing 1000ms linear;
+} */
+
+.nall-colors {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transform-origin: 160px 100px;
+}
+
+.ncolor {
+  position: absolute;
+  border-radius: 100%;
+  animation: fade-scale 8s infinite;  
+  opacity: 0;
+}
+.ncolor-yellow {
+  background: #FFC500;
+  animation-delay: 0.25s;  
+}
+
+.ncolor-pink {
+  background: #ED0081;
+  animation-delay: 0.5s;  
+}
+
+.ncolor-green {
+  background: #61ff53;
+  animation-delay: 0.75s;    
 }
 
 .all-colors {
@@ -367,7 +397,7 @@ body {
     opacity: 0;
   }
 }
-
+/* 
 
 .bg-color-yellow {
   background: #E6B020;
@@ -422,7 +452,7 @@ body {
 .blur200px {
   -webkit-filter: blur(200px);
   filter: blur(200px);
-}
+} */
 
 @media screen and (max-width: 767px) {
   input[type="text"],

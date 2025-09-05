@@ -2,88 +2,71 @@
     <section 
     id="projects"
     class="bg-white w-full h-screen flex justify-center items-center">
-        <div class="ml-[13%] w-full flex flex-col justify-center items-start">
+        <div class="max-w-[75%] w-full flex flex-col justify-center items-start">
             <ul class="w-full font-GenJyuuGothicBold tracking-[1px] sm:tracking-[1px] text-[48px] text-gradient-4-colors mb-10">
                 <li>What We Did</li>
             </ul>
             
             <div class="w-full flex flex-col xl:flex-row justify-center items-start">
-                <div class="w-full xl:w-1/6">
+                <div class="w-full xl:w-[35%]">
                     <ul class="px-0 xl:px-10 mb-10">
                         <li class="mb-6 text-[32px] font-bold text-[#606060] tracking-[1.5px] font-GenJyuuGothicRegular">過往精選案例</li>
                         <li class="text-[14px] text-[#606060] tracking-[1.5px] font-GenJyuuGothicRegular">高邦創意擁有豐富的展覽策劃經驗，從企劃撰寫到活動落地，我們已成功主辦多場大型動漫IP 展覽。</li>
                     </ul>
                 </div>
-                <div class="w-full xl:w-5/6 flex flex-row gap-4 justify-center items-center">
-                  <ClientOnly>
-                    <Swiper
-                      :modules="modules"
-                      :slides-per-view="'auto'"
-                      :loop="true"
-                      :space-between="20" :autoplay="true" :pagination="false" :navigation="false" class="w-full"
-                      :breakpoints="{
-                        0: {
-                          slidesPerView: 1,
-                        },
-                        768: {
-                          slidesPerView: 'auto',
-                        },
-                      }"
-                    >
-                    
-                    <SwiperSlide class="!h-[440px] !w-[660px] flex items-center justify-center rounded-2xl overflow-hidden">
-                    <div class="relative cursor-pointer" @click="openModal1">
-                        <img src="/slider-1.png" class="w-full" />
-                    </div>
-                    </SwiperSlide>
 
-                    <SwiperSlide class="!h-[440px] !w-[440px] flex items-center justify-center rounded-2xl overflow-hidden">
-                    <div class="relative">
-                        <img src="/slider-2.png" class="w-full" />
-                    </div>
-                    </SwiperSlide>
+                <div class="w-full xl:w-[120%] flex flex-row justify-center items-center">
+                  <!-- -->
+<div class="relative w-full overflow-x-auto snap-x hide-scrollbar xl:overflow-x-visible xl:whitespace-nowrap">
+    <div class="flex flex-row gap-6 whitespace-nowrap xl:flex-nowrap">
+        <div class="snap-start inline-block cursor-pointer w-full xl:w-auto" @click="openModal1">
+            <img src="/slider-1.png" class="w-full" />
+        </div>
+        
+        <div class="snap-start inline-block w-full xl:w-auto">
+            <img src="/slider-2.png" class="w-full" />
+        </div>
+        
+        <div class="snap-start inline-block w-full xl:w-auto">
+            <div class="relative flex justify-center items-center">
+                <img src="/slider-3.png" class="w-full h-full object-cover" />
+                <ul class="absolute text-left px-8">
+                    <li class="text-white tracking-[1.5px] text-[24px] font-GenJyuuGothicBold">MORE …</li>
+                    <li class="mt-6 text-white text-[12px] tracking-[1.5px] font-GenJyuuGothicRegular">因保密協議無法公開，協助<br>多項國際IP推動大型/政府活動</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+                  <!-- -->
 
-                    <SwiperSlide class="!h-[440px] !w-[300px] flex items-center justify-center rounded-[48px] overflow-hidden">
-                    <div
-                        class="relative flex items-center justify-center h-full">
-                        <img src="/slider-3.png" class="w-full h-full object-cover" />
-                        <ul class="absolute text-center px-8">
-                        <li class="text-white">More …</li>
-                        <li class="mt-6 text-white">
-                            因保密協議無法公開，協助多項國際IP推動大型/政府活動
-                        </li>
-                        </ul>
-                    </div>
-                    </SwiperSlide>
-
-                    <SwiperSlide class="!h-[440px] !w-[660px] flex items-center justify-center rounded-2xl overflow-hidden">
-                    <div class="relative cursor-pointer" @click="openModal1">
-                        <img src="/slider-1.png" class="w-full" />
-                    </div>
-                    </SwiperSlide>
-
-                    <SwiperSlide class="!h-[440px] !w-[440px] flex items-center justify-center rounded-2xl overflow-hidden">
-                    <div class="relative">
-                        <img src="/slider-2.png" class="w-full" />
-                    </div>
-                    </SwiperSlide>
-
-                    <SwiperSlide class="!h-[440px] !w-[300px] flex items-center justify-center rounded-[48px] overflow-hidden">
-                    <div
-                        class="relative flex items-center justify-center h-full">
-                        <img src="/slider-3.png" class="w-full h-full object-cover" />
-                        <ul class="absolute text-center px-8">
-                        <li class="text-white">More …</li>
-                        <li class="mt-6 text-white">
-                            因保密協議無法公開，協助多項國際IP推動大型/政府活動
-                        </li>
-                        </ul>
-                    </div>
-                    </SwiperSlide>
-
-                    </Swiper>
-                  </ClientOnly>
                 </div>
+                <!-- <div class="w-full xl:w-[120%] flex flex-row gap-4 justify-center items-center">
+
+                  <div class="snap-x flex flex-row gap-6">
+
+                    <div class="snap-start " @click="openModal1">
+                      <img src="/slider-1.png" class="w-full" />
+                    </div>
+                    <div class="snap-start">
+                      <img src="/slider-2.png" class="w-full" />
+                    </div>
+                    <div class="snap-start">
+                      <div class="relative flex justify-center items-center">
+                        <img src="/slider-3.png" class="w-full h-full object-cover" />
+                        <ul class="absolute text-center px-8">
+                          <li class="text-white">More …</li>
+                          <li class="mt-6 text-white">
+                            因保密協議無法公開，協助多項國際IP推動大型/政府活動
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    
+                  </div>
+
+                </div> -->
+
             </div>
         </div>
     </section>

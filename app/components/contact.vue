@@ -111,7 +111,7 @@
 
             </div>
 
-            <div class="flex flex-col justify-center items-center">
+            <div class="flex flex-col justify-center items-center mb-40 2xl:mb-0">
                 <h5 class="hidden xl:flex font-GenJyuuGothicBold tracking-[1px] sm:tracking-[1px] text-[28px] xl:text-[24px] contact-text-gradient-4-colors mb-4">期待您的加入，與我們一同創造無限可能。</h5>
                 <h5 class="flex xl:hidden font-GenJyuuGothicBold tracking-[1px] sm:tracking-[1px] text-[28px] xl:text-[24px] contact-text-gradient-4-colors mb-4 text-center">期待您的加入，<br>與我們一同創造無限可能。</h5>
                 <p class="text-[12px] text-[#606060] tracking-[2px] text-center font-GenJyuuGothicRegular">Make dreams come true, make everything happen.</p>
