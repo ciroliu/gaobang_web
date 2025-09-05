@@ -8,10 +8,7 @@
           ref="tw"
           @click.prevent="$i18n.setLocale('zh-tw')"
           class="border-2 rounded-xl py-1 px-2 text-[14px] cursor-pointer transition-colors duration-300"
-          :class="{
-            'bg-white border-white text-[#242870]': $i18n.locale === 'zh-tw',
-            'border-white text-white': $i18n.locale !== 'zh-tw',
-          }"
+          :class="twClasses"
         >
           中
         </li>
@@ -19,10 +16,7 @@
           ref="en"
           @click.prevent="$i18n.setLocale('en')"
           class="border-2 rounded-xl py-1 px-2 text-[14px] cursor-pointer transition-colors duration-300"
-          :class="{
-            'bg-white text-[#242870] border-white': $i18n.locale === 'en',
-            'border-white text-white': $i18n.locale !== 'en',
-          }"
+          :class="enClasses"
         >
           En
         </li>
@@ -30,10 +24,7 @@
           ref="ja"
           @click.prevent="$i18n.setLocale('ja')"
           class="border-2 rounded-xl py-1 px-2 text-[14px] cursor-pointer transition-colors duration-300"
-          :class="{
-            'bg-white text-[#242870] border-white': $i18n.locale === 'ja',
-            'border-white text-white': $i18n.locale !== 'ja',
-          }"
+          :class="jaClasses"
         >
           日
         </li>
@@ -239,6 +230,24 @@ const isMobileMenuOpen = ref(false);
 const localeLinks = ref(null);
 const isScrolled = ref(false);
 
+const selectedClasses = 'bg-white text-[#242870] border-white';
+const defaultClasses = 'border-white text-white';
+
+const twClasses = computed(() => ({
+  [selectedClasses]: locale.value === 'zh-tw',
+  [defaultClasses]: locale.value !== 'zh-tw',
+}));
+
+const enClasses = computed(() => ({
+  [selectedClasses]: locale.value === 'en',
+  [defaultClasses]: locale.value !== 'en',
+}));
+
+const jaClasses = computed(() => ({
+  [selectedClasses]: locale.value === 'ja',
+  [defaultClasses]: locale.value !== 'ja',
+}));
+
 const scrollToSection = (sectionId) => {
   const element = document.getElementById(sectionId);
   if (element) {
@@ -299,16 +308,52 @@ onMounted(() => {
             }
           });
           // lang
-          $gsap.to(localeLinks.value.querySelectorAll('li'), {
-            color: '#242870',
-            borderColor: '#242870',
-            scrollTrigger: {
-              trigger: 'body',
-              start: 'top -900px',
-              end: '+=10',
-              scrub: true,
-            }
-          });
+          if (localeLinks.value) {
+
+            $gsap.to(localeLinks.value.querySelectorAll('li'), {
+              scrollTrigger: {
+                trigger: 'body',
+                start: 'top -900',
+                onEnter: () => {
+                  // 滾動超過 900px，改變所有 li 的樣式
+                  $gsap.to(localeLinks.value.querySelectorAll('li'), {
+                    color: '#242870',
+                    borderColor: '#242870',
+                    duration: 0.3,
+                  });
+                  // 特殊處理當前選中的 li，使其背景變為白色
+                  // 找到當前選中的 li，然後添加 bg-white 類別
+                  const currentSelected = localeLinks.value.querySelector('.bg-white');
+                  if (currentSelected) {
+                    $gsap.to(currentSelected, {
+                      backgroundColor: '#242870',
+                      color: '#fff',
+                      duration: 0.3,
+                    });
+                  }
+                },
+                onLeaveBack: () => {
+                  // 滾動回滾到 900px 以內，恢復預設樣式
+                  $gsap.to(localeLinks.value.querySelectorAll('li'), {
+                    color: '#ffffff',
+                    borderColor: '#ffffff',
+                    duration: 0.3,
+                  });
+                  // 恢復當前選中的 li 的背景
+                  const currentSelected = localeLinks.value.querySelector('.bg-white');
+                  if (currentSelected) {
+                    $gsap.to(currentSelected, {
+                      backgroundColor: 'transparent',
+                      duration: 0.3,
+                    });
+                  }
+                },
+              },
+            });
+
+          }
+
+          //
     },
   })
 });
