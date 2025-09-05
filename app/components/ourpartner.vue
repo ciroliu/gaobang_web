@@ -22,7 +22,7 @@
                 <!-- -->
 
                 <div class="nall-colors z-[99]">
-                    <div class="ncolor ncolor-pink absolute right-40 -top-12 w-[100px] h-[100px] blur-[20px]"></div>
+                    <div class="ncolor ncolor-pink absolute right-0 sm:right-40 -top-12 w-[100px] h-[100px] blur-[20px]"></div>
                     <div class="ncolor ncolor-yellow absolute left-0 -top-12 w-[180px] h-[180px] blur-[20px]"></div>
                     <div class="ncolor ncolor-green absolute right-56 -bottom-12 w-[100px] h-[100px] blur-[20px]"></div>
                 </div>
