@@ -8,22 +8,42 @@
             </ul>
             
             <div class="w-full flex flex-col xl:flex-row justify-center items-start">
-                <div class="w-full xl:w-1/5">
-                    <ul class="px-10">
-                        <li class="mb-6 text-[32px]">過往精選案例</li>
-                        <li>高邦創意擁有豐富的展覽策劃經驗，從企劃撰寫到活動落地，我們已成功主辦多場大型動漫IP 展覽。</li>
+                <div class="w-full xl:w-1/6">
+                    <ul class="px-0 xl:px-10 mb-10">
+                        <li class="mb-6 text-[32px] font-bold">過往精選案例</li>
+                        <li class="text-[14px]">高邦創意擁有豐富的展覽策劃經驗，從企劃撰寫到活動落地，我們已成功主辦多場大型動漫IP 展覽。</li>
                     </ul>
                 </div>
-                <div class="w-full xl:w-4/5 flex flex-row gap-4 justify-center items-center">
-                  
+                <div class="w-full xl:w-5/6 flex flex-row gap-4 justify-center items-center">
+                  <ClientOnly>
+                    <Swiper
+                      :modules="modules"
+                      :slides-per-view="'auto'"
+                      :loop="true"
+                      :space-between="20" :autoplay="true" :pagination="false" :navigation="false" class="w-full"
+                      :breakpoints="{
+                        0: {
+                          slidesPerView: 1,
+                        },
+                        768: {
+                          slidesPerView: 'auto',
+                        },
+                      }"
+                    >
+                    
+                    <SwiperSlide class="!h-[440px] !w-[660px] flex items-center justify-center rounded-2xl overflow-hidden">
                     <div class="relative cursor-pointer" @click="openModal1">
                         <img src="/slider-1.png" class="w-full" />
                     </div>
+                    </SwiperSlide>
 
+                    <SwiperSlide class="!h-[440px] !w-[440px] flex items-center justify-center rounded-2xl overflow-hidden">
                     <div class="relative">
                         <img src="/slider-2.png" class="w-full" />
                     </div>
+                    </SwiperSlide>
 
+                    <SwiperSlide class="!h-[440px] !w-[300px] flex items-center justify-center rounded-2xl overflow-hidden">
                     <div
                         class="relative flex items-center justify-center h-full">
                         <img src="/slider-3.png" class="w-full h-full object-cover" />
@@ -34,49 +54,40 @@
                         </li>
                         </ul>
                     </div>
+                    </SwiperSlide>
 
+                    <SwiperSlide class="!h-[440px] !w-[660px] flex items-center justify-center rounded-2xl overflow-hidden">
+                    <div class="relative cursor-pointer" @click="openModal1">
+                        <img src="/slider-1.png" class="w-full" />
+                    </div>
+                    </SwiperSlide>
+
+                    <SwiperSlide class="!h-[440px] !w-[440px] flex items-center justify-center rounded-2xl overflow-hidden">
+                    <div class="relative">
+                        <img src="/slider-2.png" class="w-full" />
+                    </div>
+                    </SwiperSlide>
+
+                    <SwiperSlide class="!h-[440px] !w-[300px] flex items-center justify-center rounded-2xl overflow-hidden">
+                    <div
+                        class="relative flex items-center justify-center h-full">
+                        <img src="/slider-3.png" class="w-full h-full object-cover" />
+                        <ul class="absolute text-center px-8">
+                        <li class="text-white">More …</li>
+                        <li class="mt-6 text-white">
+                            因保密協議無法公開，協助多項國際IP推動大型/政府活動
+                        </li>
+                        </ul>
+                    </div>
+                    </SwiperSlide>
+
+                    </Swiper>
+                  </ClientOnly>
                 </div>
             </div>
         </div>
     </section>
-        <!-- <ClientOnly>
-          <Swiper
-            :modules="modules"
-            :slides-per-view="'auto'"
-            :loop="true"
-            :space-between="20" :autoplay="true" :pagination="false" :navigation="false" class="w-full"
-          >
-            <SwiperSlide class="!h-[440px] !w-[440px] flex items-center justify-center rounded-2xl overflow-hidden bg-white shadow-lg">
-              <img src="/slider-1.png" alt="Slide 1" class="w-full h-full object-cover" />
-            </SwiperSlide>
-            <SwiperSlide class="!h-[440px] !w-[440px] flex items-center justify-center rounded-2xl overflow-hidden bg-white shadow-lg">
-              <img src="/slider-2.png" alt="Slide 2" class="w-full h-full object-cover" />
-            </SwiperSlide>
-            <SwiperSlide class="!h-[440px] !w-[440px] flex items-center justify-center rounded-2xl overflow-hidden bg-white shadow-lg">
-              <img src="/slider-3.png" alt="Slide 3" class="w-full h-full object-cover" />
-              <ul class="absolute text-center px-8 text-black">
-                <li class="text-white text-xl font-bold">More …</li>
-                <li class="mt-2 text-white text-sm">
-                  因保密協議無法公開，協助多項國際IP推動大型/政府活動
-                </li>
-              </ul>
-            </SwiperSlide>
-            <SwiperSlide class="!h-[440px] !w-[440px] flex items-center justify-center rounded-2xl overflow-hidden bg-white shadow-lg">
-              <img src="/slider-1.png" alt="Slide 4" class="w-full h-full object-cover" />
-            </SwiperSlide>
-            <SwiperSlide class="!h-[440px] !w-[440px] flex items-center justify-center rounded-2xl overflow-hidden bg-white shadow-lg">
-              <img src="/slider-2.png" alt="Slide 5" class="w-full h-full object-cover" />
-            </SwiperSlide>
-            
-            <SwiperSlide class="!h-[440px] !w-[250px] flex flex-col items-center justify-center rounded-2xl overflow-hidden shadow-lg"
-                         style="background: linear-gradient(to bottom, #FF6B6B 0%, #FFD700 100%);">
-                <div class="text-white text-3xl font-bold mb-4">MORE ...</div>
-                <p class="text-white text-sm text-center px-4">
-                    因保密協議無法公開，協助多項國際IP推動大型/政府活動
-                </p>
-            </SwiperSlide>
-          </Swiper>
-        </ClientOnly> -->
+
   <Teleport to="body">
     <div
       v-if="isOpen1"
@@ -108,51 +119,6 @@
     </div>
   </Teleport>
 
-  <!-- <Teleport to="body">
-    <div
-      v-if="isOpen2"
-      class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
-      @click.self="closeModal2"
-    >
-
-      <button
-        class="absolute top-4 right-4 text-white text-2xl"
-        @click="closeModal2"
-      >
-        ✕
-      </button>
-
-
-      <div class="bg-white rounded-2xl p-6 max-w-md w-full shadow-xl relative">
-        <h2 class="text-xl font-bold mb-4">彈窗卡片</h2>
-        <p class="text-gray-700">456</p>
-
-      </div>
-    </div>
-  </Teleport> -->
-
-  <!-- <Teleport to="body">
-    <div
-      v-if="isOpen3"
-      class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
-      @click.self="closeModal3"
-    >
-
-      <button
-        class="absolute top-4 right-4 text-white text-2xl"
-        @click="closeModal3"
-      >
-        ✕
-      </button>
-
-      <div class="bg-white rounded-2xl p-6 max-w-md w-full shadow-xl relative">
-        <h2 class="text-xl font-bold mb-4">彈窗卡片</h2>
-        <p class="text-gray-700">789</p>
-
-      </div>
-    </div>
-  </Teleport> -->
-
 </template>
 
 <script setup lang="ts">
@@ -165,8 +131,7 @@ import 'swiper/css/navigation'
 const modules = [Autoplay, Navigation]
 
 const isOpen1 = ref(false);
-// const isOpen2 = ref(false);
-// const isOpen3 = ref(false);
+
 
 function openModal1() {
   isOpen1.value = true;
@@ -175,22 +140,6 @@ function openModal1() {
 function closeModal1() {
   isOpen1.value = false;
 }
-
-// function openModal2() {
-//   isOpen2.value = true;
-// }
-
-// function closeModal2() {
-//   isOpen2.value = false;
-// }
-
-// function openModal3() {
-//   isOpen3.value = true;
-// }
-
-// function closeModal3() {
-//   isOpen3.value = false;
-// }
 
 </script>
 
