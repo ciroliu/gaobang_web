@@ -112,8 +112,9 @@
             </div>
 
             <div class="flex flex-col justify-center items-center">
-                <h5 class="font-GenJyuuGothicBold tracking-[1px] sm:tracking-[1px] text-[28px] xl:text-[24px] contact-text-gradient-4-colors mb-4">期待您的加入，與我們一同創造無限可能。</h5>
-                <p class="text-[12px] text-[#606060] tracking-[2px]">Make dreams come true, make everything happen.</p>
+                <h5 class="hidden xl:flex font-GenJyuuGothicBold tracking-[1px] sm:tracking-[1px] text-[28px] xl:text-[24px] contact-text-gradient-4-colors mb-4">期待您的加入，與我們一同創造無限可能。</h5>
+                <h5 class="flex xl:hidden font-GenJyuuGothicBold tracking-[1px] sm:tracking-[1px] text-[28px] xl:text-[24px] contact-text-gradient-4-colors mb-4 text-center">期待您的加入，<br>與我們一同創造無限可能。</h5>
+                <p class="text-[12px] text-[#606060] tracking-[2px] text-center">Make dreams come true, make everything happen.</p>
             </div>
         </div>
     <footer class="w-full absolute bottom-0 h-[60px] bg-[#242870] hidden xl:flex">

@@ -7,7 +7,7 @@
                 <li>Our Partner</li>
             </ul>
             
-            <div class="w-full sm:w-1/2 flex flex-row justify-center items-center">
+            <div class="w-full xl:w-1/2 flex flex-row justify-center items-center">
                 <div class="relative w-[360px] h-[420px] bg-[#F7F7F7] px-10 py-20 rounded-[40px]">
                     <h2><img src="/LOXARC.png" class="w-[240px] mx-auto"></h2>
                     <p class="text-[#606060] text-[14px] pt-20">ソーシャルゲームアプリの企画・開発・運営、UI・UXデザインコンサルティング、WEBサービスをはじめとしたインターネットに備わるサービスを展開、支援しています。</p>
