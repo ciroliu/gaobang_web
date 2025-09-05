@@ -20,28 +20,28 @@
 
                     <label 
                     for="name"
-                    class="block uppercase tracking-[1px] text-gray-500 text-[14px] font-bold mb-2 w-full font-GenJyuuGothicBold">
+                    class="block uppercase tracking-[1px] text-[#606060] text-[14px] font-bold mb-2 w-full font-GenJyuuGothicBold">
                         姓名
                     </label>
                     <input 
                     id="name"
                     name="姓名"
                     v-model="form.name"
-                    class="appearance-none block w-full bg-white text-gray-500 text-[14px] border-2 rounded-xl py-2 px-3 mb-3 font-GenJyuuGothicBold"  
+                    class="appearance-none block w-full bg-white text-[#606060] text-[14px] border-2 rounded-xl py-2 px-3 mb-3 font-GenJyuuGothicBold"  
                     :class="{'border-green-500': validateField('name')}"
                     type="text"
                     required>
 
                     <label 
                     for="company"
-                    class="block uppercase tracking-[1px] text-gray-500 text-[14px] font-bold mb-2 w-full font-GenJyuuGothicBold">
+                    class="block uppercase tracking-[1px] text-[#606060] text-[14px] font-bold mb-2 w-full font-GenJyuuGothicBold">
                         公司名稱
                     </label>
                     <input 
                     id="company"
                     name="公司名稱"
                     v-model="form.company"
-                    class="appearance-none block w-full bg-white text-gray-500 text-[14px] border-2 rounded-xl py-2 px-3 mb-3 font-GenJyuuGothicBold"  
+                    class="appearance-none block w-full bg-white text-[#606060] text-[14px] border-2 rounded-xl py-2 px-3 mb-3 font-GenJyuuGothicBold"  
                     :class="{'border-green-500': validateField('company')}"
                     type="text"
                     required>
@@ -49,7 +49,7 @@
                     <label 
                     for="email"
                     name="信箱帳號"
-                    class="block uppercase tracking-[1px] text-gray-500 text-[14px] font-bold mb-2 w-full font-GenJyuuGothicBold">
+                    class="block uppercase tracking-[1px] text-[#606060] text-[14px] font-bold mb-2 w-full font-GenJyuuGothicBold">
                         EMAIL
                     </label>
                     <input 
@@ -62,14 +62,14 @@
 
                     <label 
                     for="category"
-                    class="block uppercase tracking-[1px] text-gray-500 text-[14px] font-bold mb-2 w-full font-GenJyuuGothicBold">
+                    class="block uppercase tracking-[1px] text-[#606060] text-[14px] font-bold mb-2 w-full font-GenJyuuGothicBold">
                         合作類別
                     </label>
                     <input 
                     id="category"
                     name="合作類別"
                     v-model="form.category"
-                    class="appearance-none block w-full bg-white text-gray-500 text-[14px] border-2 rounded-xl py-2 px-3 mb-3 font-GenJyuuGothicBold"  
+                    class="appearance-none block w-full bg-white text-[#606060] text-[14px] border-2 rounded-xl py-2 px-3 mb-3 font-GenJyuuGothicBold"  
                     :class="{'border-green-500': validateField('category')}"
                     type="text"
                     required>
@@ -80,7 +80,7 @@
 
                         <label 
                         for="message"
-                        class="block uppercase tracking-[1px] text-gray-500 text-[14px] font-bold mb-2 w-full font-GenJyuuGothicBold">
+                        class="block uppercase tracking-[1px] text-[#606060] text-[14px] font-bold mb-2 w-full font-GenJyuuGothicBold">
                         期望合作的內容概述
                         </label>
                         <textarea 
@@ -88,7 +88,7 @@
                         v-model="form.message"
                         name="期望合作的內容概述" 
                         rows="6" 
-                        class="block w-full h-full bg-white rounded-xl text-gray-500 text-[14px] border-2 py-2 px-3 mb-3 font-GenJyuuGothicBold"
+                        class="block w-full h-full bg-white rounded-xl text-[#606060] text-[14px] border-2 py-2 px-3 mb-3 font-GenJyuuGothicBold"
                         :class="{'border-green-500': validateField('message')}"
                         required></textarea>
 
@@ -112,8 +112,8 @@
             </div>
 
             <div class="flex flex-col justify-center items-center">
-                <h5 class="font-GenJyuuGothicBold tracking-[1px] sm:tracking-[1px] text-[28px] xl:text-[24px] text-gradient-4-colors mb-4">期待您的加入，與我們一同創造無限可能。</h5>
-                <p class="text-[12px]">Make dreams come true, make everything happen.</p>
+                <h5 class="font-GenJyuuGothicBold tracking-[1px] sm:tracking-[1px] text-[28px] xl:text-[24px] contact-text-gradient-4-colors mb-4">期待您的加入，與我們一同創造無限可能。</h5>
+                <p class="text-[12px] text-[#606060] tracking-[2px]">Make dreams come true, make everything happen.</p>
             </div>
         </div>
     <footer class="w-full absolute bottom-0 h-[60px] bg-[#242870] hidden xl:flex">

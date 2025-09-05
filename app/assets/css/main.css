@@ -446,3 +446,18 @@ body {
   -webkit-background-clip: text;
   color: transparent;
 }
+
+.contact-text-gradient-4-colors {
+  background-image: linear-gradient(
+    to right, 
+    #ED0081 0%,       /* 紫色從 0% 開始 */
+    #F13630 5%,      /* 紅色從 25% 開始 */
+    #EE783B 10%,      /* 橘色從 50% 開始 */
+    #FFC500 75%,      /* 黃色從 75% 開始 */
+    #FFC500 100%      /* 確保黃色延伸到 100% 結束 */
+  );
+  
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
