@@ -123,12 +123,12 @@
                 <ul class="flex flex-row gap-8 justify-center items-center">
                     <li>
                       <a href="https://www.google.com" target="_blank" rel="noopener noreferrer">
-                        <img src="/gaobang.png" alt="logo" class="w-[35px]" />
+                        <img src="/gaobang.webp" alt="logo" class="w-[35px]" />
                       </a>
                     </li>
                     <li>
                       <a href="mailto:contact@example.com">
-                        <img src="/mail.png" alt="mail" class="w-[35px]" />
+                        <img src="/mail.webp" alt="mail" class="w-[35px]" />
                       </a>
                     </li>
                 </ul>
@@ -143,12 +143,12 @@
                 <ul class="flex flex-row gap-8 justify-center items-center">
                     <li>
                       <a href="https://www.google.com" target="_blank" rel="noopener noreferrer">
-                        <img src="/gaobang.png" alt="logo" class="w-[35px]" />
+                        <img src="/gaobang.webp" alt="logo" class="w-[35px]" />
                       </a>
                     </li>
                     <li>
                       <a href="mailto:contact@example.com">
-                        <img src="/mail.png" alt="mail" class="w-[35px]" />
+                        <img src="/mail.webp" alt="mail" class="w-[35px]" />
                       </a>
                     </li>
                 </ul>

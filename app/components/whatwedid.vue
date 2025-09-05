@@ -18,74 +18,74 @@
 
                 <div class="w-full xl:w-4/5 flex flex-row justify-center items-center pl-[13%]">
                   <!-- -->
-<div class="relative group">
-    <!-- 可橫向滾動的容器 -->
-    <div
-      ref="scroller"
-      class="relative w-full overflow-x-auto snap-x snap-mandatory hide-scrollbar scroll-smooth xl:overflow-x-visible"
-    >
-      <div class="flex flex-row gap-14 sm:gap-10 xl:gap-6 whitespace-nowrap h-[60vh] xl:h-auto items-center">
+                  <div class="relative group">
+                      <!-- 可橫向滾動的容器 -->
+                      <div
+                        ref="scroller"
+                        class="relative w-full overflow-x-auto snap-x snap-mandatory hide-scrollbar scroll-smooth xl:overflow-x-visible"
+                      >
+                        <div class="flex flex-row gap-14 sm:gap-10 xl:gap-6 whitespace-nowrap h-[60vh] xl:h-auto items-center">
 
-        <!-- 卡片 1 -->
-        <div
-          class="snap-center min-w-[95%] sm:min-w-[60%] md:min-w-[50%] xl:min-w-0 h-full flex justify-center items-center cursor-pointer"
-          @click="openModal1"
-        >
-          <img src="/slider-1.png" class="h-full w-auto object-contain" />
-        </div>
+                          <!-- 卡片 1 -->
+                          <div
+                            class="snap-center min-w-[95%] sm:min-w-[60%] md:min-w-[50%] xl:min-w-0 h-full flex justify-center items-center cursor-pointer"
+                            @click="openModal1"
+                          >
+                            <img src="/slider-1.webp" class="h-full w-auto object-contain" />
+                          </div>
 
-        <!-- 卡片 2 -->
-        <div
-          class="snap-center min-w-[95%] sm:min-w-[60%] md:min-w-[50%] xl:min-w-0 h-full flex justify-center items-center"
-        >
-          <img src="/slider-2.png" class="h-full w-auto object-contain" />
-        </div>
+                          <!-- 卡片 2 -->
+                          <div
+                            class="snap-center min-w-[95%] sm:min-w-[60%] md:min-w-[50%] xl:min-w-0 h-full flex justify-center items-center"
+                          >
+                            <img src="/slider-2.webp" class="h-full w-auto object-contain" />
+                          </div>
 
-        <!-- 卡片 3 -->
-        <div
-          class="snap-center min-w-[95%] sm:min-w-[60%] md:min-w-[50%] xl:min-w-0 h-full flex justify-center items-center"
-        >
-          <div class="relative flex justify-center items-center h-full w-full pr-20 sm:pr-0">
-            <img src="/slider-3.png" class="h-full w-auto object-contain" />
-            <ul class="absolute text-left px-8">
-              <li class="text-white tracking-[1.5px] text-[24px] font-GenJyuuGothicBold">
-                MORE …
-              </li>
-              <li class="mt-6 text-white text-[12px] tracking-[1.5px] font-GenJyuuGothicRegular">
-                因保密協議無法公開，協助<br />多項國際IP推動大型/政府活動
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
+                          <!-- 卡片 3 -->
+                          <div
+                            class="snap-center min-w-[95%] sm:min-w-[60%] md:min-w-[50%] xl:min-w-0 h-full flex justify-center items-center"
+                          >
+                            <div class="relative flex justify-center items-center h-full w-full pr-20 sm:pr-0">
+                              <img src="/slider-3.webp" class="h-full w-auto object-contain" />
+                              <ul class="absolute text-left px-8">
+                                <li class="text-white tracking-[1.5px] text-[24px] font-GenJyuuGothicBold">
+                                  MORE …
+                                </li>
+                                <li class="mt-6 text-white text-[12px] tracking-[1.5px] font-GenJyuuGothicRegular">
+                                  因保密協議無法公開，協助<br />多項國際IP推動大型/政府活動
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
 
-    <!-- 左側箭頭 -->
-    <a
-      v-show="canLeft"
-      @click="scrollLeft"
-      class="absolute left-4 top-1/2 -translate-y-1/2
-             opacity-0 group-hover:opacity-100 transition
-             bg-black/60 hover:bg-black/80 text-white
-             rounded-full w-10 h-10 flex items-center justify-center
-             backdrop-blur pointer-events-auto cursor-pointer"
-    >
-      &lt;
-  </a>
+                      <!-- 左側箭頭 -->
+                      <a
+                        v-show="canLeft"
+                        @click="scrollLeft"
+                        class="absolute left-4 top-1/2 -translate-y-1/2
+                              opacity-0 group-hover:opacity-100 transition
+                              bg-black/60 hover:bg-black/80 text-white
+                              rounded-full w-10 h-10 flex items-center justify-center
+                              backdrop-blur pointer-events-auto cursor-pointer"
+                      >
+                        &lt;
+                    </a>
 
-    <!-- 右側箭頭 -->
-    <a
-      v-show="canRight"
-      @click="scrollRight"
-      class="absolute right-4 top-1/2 -translate-y-1/2
-             opacity-0 group-hover:opacity-100 transition
-             bg-black/60 hover:bg-black/80 text-white
-             rounded-full w-10 h-10 flex items-center justify-center
-             backdrop-blur pointer-events-auto cursor-pointer"
-    >
-      &gt;
-  </a>
-  </div>
+                      <!-- 右側箭頭 -->
+                      <a
+                        v-show="canRight"
+                        @click="scrollRight"
+                        class="absolute right-4 top-1/2 -translate-y-1/2
+                              opacity-0 group-hover:opacity-100 transition
+                              bg-black/60 hover:bg-black/80 text-white
+                              rounded-full w-10 h-10 flex items-center justify-center
+                              backdrop-blur pointer-events-auto cursor-pointer"
+                      >
+                        &gt;
+                    </a>
+                    </div>
 
                   <!-- -->
 
@@ -119,7 +119,7 @@
               <p class="text-gray-700 text-[12px]">首次結合「五感體驗」，以知覺、視覺、聽覺、觸覺及味覺做完美結合，首度展場加入輕食區，超越以往展覽規模，24隻大型公仔現身，其中更有 Big Mom 425公分高讓粉絲驚嘆不已，更為台灣首次曝光 ！展期導入 AR 互動及電子集章活動，讓粉絲能夠在回味劇情，還能留下紀念。</p>
             </div>
             <div class="w-full xl:w-2/3">
-              <img src="/whatdid.png" class="w-full">
+              <img src="/whatdid.webp" class="w-full">
             </div>
           </div>
       </div>

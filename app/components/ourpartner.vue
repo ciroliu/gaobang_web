@@ -10,12 +10,12 @@
             <div class="relative w-full xl:w-1/2 flex flex-row justify-center items-center">
                 <!-- -->
                 <div class="relative w-[360px] h-[420px] bg-[#F7F7F7] px-10 py-20 rounded-[40px] z-[100]">
-                    <h2><img src="/LOXARC.png" class="w-[240px] mx-auto"></h2>
+                    <h2><img src="/LOXARC.webp" class="w-[240px] mx-auto"></h2>
                     <p class="text-[#606060] text-[14px] tracking-[1.5px] font-GenJyuuGothicRegular pt-20">ソーシャルゲームアプリの企画・開発・運営、UI・UXデザインコンサルティング、WEBサービスをはじめとしたインターネットに備わるサービスを展開、支援しています。</p>
 
                     <div class="absolute bottom-5 right-5">
                         <a href="https://loxarc.co.jp/" rel="noopener noreferrer" target="_blank">
-                            <img src="/web.png" class="w-[36px]">
+                            <img src="/web.webp" class="w-[36px]">
                         </a>
                     </div>
                 </div>
