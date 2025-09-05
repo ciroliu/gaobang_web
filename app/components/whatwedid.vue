@@ -43,7 +43,7 @@
                     </div>
                     </SwiperSlide>
 
-                    <SwiperSlide class="!h-[440px] !w-[300px] flex items-center justify-center rounded-2xl overflow-hidden">
+                    <SwiperSlide class="!h-[440px] !w-[300px] flex items-center justify-center rounded-[48px] overflow-hidden">
                     <div
                         class="relative flex items-center justify-center h-full">
                         <img src="/slider-3.png" class="w-full h-full object-cover" />
@@ -68,7 +68,7 @@
                     </div>
                     </SwiperSlide>
 
-                    <SwiperSlide class="!h-[440px] !w-[300px] flex items-center justify-center rounded-2xl overflow-hidden">
+                    <SwiperSlide class="!h-[440px] !w-[300px] flex items-center justify-center rounded-[48px] overflow-hidden">
                     <div
                         class="relative flex items-center justify-center h-full">
                         <img src="/slider-3.png" class="w-full h-full object-cover" />
