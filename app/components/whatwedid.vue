@@ -10,8 +10,8 @@
             <div class="w-full flex flex-col xl:flex-row justify-center items-start">
                 <div class="w-full xl:w-1/6">
                     <ul class="px-0 xl:px-10 mb-10">
-                        <li class="mb-6 text-[32px] font-bold text-[#606060]">過往精選案例</li>
-                        <li class="text-[14px] text-[#606060]">高邦創意擁有豐富的展覽策劃經驗，從企劃撰寫到活動落地，我們已成功主辦多場大型動漫IP 展覽。</li>
+                        <li class="mb-6 text-[32px] font-bold text-[#606060] tracking-[1.5px] font-GenJyuuGothicRegular">過往精選案例</li>
+                        <li class="text-[14px] text-[#606060] tracking-[1.5px] font-GenJyuuGothicRegular">高邦創意擁有豐富的展覽策劃經驗，從企劃撰寫到活動落地，我們已成功主辦多場大型動漫IP 展覽。</li>
                     </ul>
                 </div>
                 <div class="w-full xl:w-5/6 flex flex-row gap-4 justify-center items-center">

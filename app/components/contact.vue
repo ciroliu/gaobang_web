@@ -20,28 +20,28 @@
 
                     <label 
                     for="name"
-                    class="block uppercase tracking-[1px] text-[#606060] text-[14px] font-bold mb-2 w-full font-GenJyuuGothicBold">
+                    class="block uppercase tracking-[1px] text-[#606060] text-[14px] mb-2 w-full font-GenJyuuGothicRegular">
                         姓名
                     </label>
                     <input 
                     id="name"
                     name="姓名"
                     v-model="form.name"
-                    class="appearance-none block w-full bg-white text-[#606060] text-[14px] border-2 rounded-xl py-2 px-3 mb-3 font-GenJyuuGothicBold"  
+                    class="appearance-none block w-full bg-white text-[#606060] text-[14px] border-2 rounded-xl py-2 px-3 mb-3 font-GenJyuuGothicRegular"  
                     :class="{'border-green-500': validateField('name')}"
                     type="text"
                     required>
 
                     <label 
                     for="company"
-                    class="block uppercase tracking-[1px] text-[#606060] text-[14px] font-bold mb-2 w-full font-GenJyuuGothicBold">
+                    class="block uppercase tracking-[1px] text-[#606060] text-[14px] mb-2 w-full font-GenJyuuGothicRegular">
                         公司名稱
                     </label>
                     <input 
                     id="company"
                     name="公司名稱"
                     v-model="form.company"
-                    class="appearance-none block w-full bg-white text-[#606060] text-[14px] border-2 rounded-xl py-2 px-3 mb-3 font-GenJyuuGothicBold"  
+                    class="appearance-none block w-full bg-white text-[#606060] text-[14px] border-2 rounded-xl py-2 px-3 mb-3 font-GenJyuuGothicRegular"  
                     :class="{'border-green-500': validateField('company')}"
                     type="text"
                     required>
@@ -49,27 +49,27 @@
                     <label 
                     for="email"
                     name="信箱帳號"
-                    class="block uppercase tracking-[1px] text-[#606060] text-[14px] font-bold mb-2 w-full font-GenJyuuGothicBold">
+                    class="block uppercase tracking-[1px] text-[#606060] text-[14px] mb-2 w-full font-GenJyuuGothicRegular">
                         EMAIL
                     </label>
                     <input 
                     id="email"
                     v-model="form.email"
-                    class="appearance-none block w-full bg-white text-gray-500 text-[14px] border-2 rounded-xl py-2 px-3 mb-3 font-GenJyuuGothicBold"  
+                    class="appearance-none block w-full bg-white text-gray-500 text-[14px] border-2 rounded-xl py-2 px-3 mb-3 font-GenJyuuGothicRegular"  
                     :class="{'border-green-500': validateField('email')}"
                     type="email"
                     required>
 
                     <label 
                     for="category"
-                    class="block uppercase tracking-[1px] text-[#606060] text-[14px] font-bold mb-2 w-full font-GenJyuuGothicBold">
+                    class="block uppercase tracking-[1px] text-[#606060] text-[14px] mb-2 w-full font-GenJyuuGothicRegular">
                         合作類別
                     </label>
                     <input 
                     id="category"
                     name="合作類別"
                     v-model="form.category"
-                    class="appearance-none block w-full bg-white text-[#606060] text-[14px] border-2 rounded-xl py-2 px-3 mb-3 font-GenJyuuGothicBold"  
+                    class="appearance-none block w-full bg-white text-[#606060] text-[14px] border-2 rounded-xl py-2 px-3 mb-3 font-GenJyuuGothicRegular"  
                     :class="{'border-green-500': validateField('category')}"
                     type="text"
                     required>
@@ -80,7 +80,7 @@
 
                         <label 
                         for="message"
-                        class="block uppercase tracking-[1px] text-[#606060] text-[14px] font-bold mb-2 w-full font-GenJyuuGothicBold">
+                        class="block uppercase tracking-[1px] text-[#606060] text-[14px] mb-2 w-full font-GenJyuuGothicRegular">
                         期望合作的內容概述
                         </label>
                         <textarea 
@@ -88,7 +88,7 @@
                         v-model="form.message"
                         name="期望合作的內容概述" 
                         rows="6" 
-                        class="block w-full h-full bg-white rounded-xl text-[#606060] text-[14px] border-2 py-2 px-3 mb-3 font-GenJyuuGothicBold"
+                        class="block w-full h-full bg-white rounded-xl text-[#606060] text-[14px] border-2 py-2 px-3 mb-3 font-GenJyuuGothicRegular"
                         :class="{'border-green-500': validateField('message')}"
                         required></textarea>
 
@@ -99,7 +99,7 @@
                         <button 
                         type="submit"
                         :disabled="isSubmitting || !isValid"
-                        class="rounded-2xl px-8 py-2 text-[14px] text-white font-GenJyuuGothicBold inline-flex justify-center items-center"
+                        class="rounded-2xl px-8 py-2 text-[14px] text-white font-GenJyuuGothicRegular inline-flex justify-center items-center"
                         :class="{'opacity-100 cursor-not-allowed': !isValid}"
                         style="background: linear-gradient(to right, #9A1184 0%, #E33733 35%, #F4BF20 70%);">
                             {{ isSubmitting ? 'SUBMIT' : 'SUBMIT' }}
@@ -114,7 +114,7 @@
             <div class="flex flex-col justify-center items-center">
                 <h5 class="hidden xl:flex font-GenJyuuGothicBold tracking-[1px] sm:tracking-[1px] text-[28px] xl:text-[24px] contact-text-gradient-4-colors mb-4">期待您的加入，與我們一同創造無限可能。</h5>
                 <h5 class="flex xl:hidden font-GenJyuuGothicBold tracking-[1px] sm:tracking-[1px] text-[28px] xl:text-[24px] contact-text-gradient-4-colors mb-4 text-center">期待您的加入，<br>與我們一同創造無限可能。</h5>
-                <p class="text-[12px] text-[#606060] tracking-[2px] text-center">Make dreams come true, make everything happen.</p>
+                <p class="text-[12px] text-[#606060] tracking-[2px] text-center font-GenJyuuGothicRegular">Make dreams come true, make everything happen.</p>
             </div>
         </div>
     <footer class="w-full absolute bottom-0 h-[60px] bg-[#242870] hidden xl:flex">
@@ -133,8 +133,8 @@
                     </li>
                 </ul>
             </div>
-            <div class="flex-1 text-[12px] text-center tracking-[1.5px]">台北辦公室：台北市大同區市民大道一段209號12樓</div>
-            <div class="flex-1 text-[12px] text-center tracking-[1.5px]">Copyright © 2025 GAO BANG CREATIVITY All Rights Reserved 2021</div>
+            <div class="flex-1 text-[12px] text-center tracking-[1.5px] font-GenJyuuGothicRegular">台北辦公室：台北市大同區市民大道一段209號12樓</div>
+            <div class="flex-1 text-[12px] text-center tracking-[1.5px] font-GenJyuuGothicRegular">Copyright © 2025 GAO BANG CREATIVITY All Rights Reserved 2021</div>
         </div>
     </footer>
     <footer class="flex xl:hidden w-full absolute bottom-0 h-[240px] bg-[#242870]">
@@ -153,9 +153,9 @@
                     </li>
                 </ul>
             </div>
-            <div class="text-[10px] text-center tracking-[1.25px]">台北辦公室：台北市大同區市民大道一段209號12樓</div>
+            <div class="text-[10px] text-center tracking-[1.25px] font-GenJyuuGothicRegular">台北辦公室：台北市大同區市民大道一段209號12樓</div>
             <hr class="bg-white h-[1px] w-full my-6">
-            <div class="text-[10px] text-center tracking-[1.25px]">Copyright © 2025 GAO BANG CREATIVITY All Rights Reserved 2021</div>
+            <div class="text-[10px] text-center tracking-[1.25px] font-GenJyuuGothicRegular">Copyright © 2025 GAO BANG CREATIVITY All Rights Reserved 2021</div>
         </div>
     </footer>
     </section>
@@ -227,7 +227,7 @@
             "theme": "auto",
             "type": "success",
             "autoClose": 3000,
-            "toastClassName" : "font-GenJyuuGothicBold text-[14px] text-gray-700 tracking-[1px]",
+            "toastClassName" : "font-GenJyuuGothicRegular text-[14px] text-gray-700 tracking-[1px]",
             "dangerouslyHTMLString": true
           });
         } else {
@@ -241,7 +241,7 @@
             "theme": "auto",
             "type": "error",
             "autoClose": 3000,
-            "toastClassName" : "font-GenJyuuGothicBold text-[14px] text-gray-700 tracking-[1px]",
+            "toastClassName" : "font-GenJyuuGothicRegular text-[14px] text-gray-700 tracking-[1px]",
             "dangerouslyHTMLString": true
         });
       } finally {

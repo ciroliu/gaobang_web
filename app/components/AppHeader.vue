@@ -1,6 +1,6 @@
 <template>
   <header class="fixed top-4 w-full z-[100]">
-    <div class="relative flex justify-between items-center py-5 px-32">
+    <div class="relative flex justify-between items-center py-5 pl-10 pr-32">
       <ul
       ref="localeLinks"
       class="hidden xl:flex flex-row gap-[1.5px] text-white font-GenJyuuGothicBold">
@@ -32,7 +32,7 @@
 
       <nav
         ref="navLinks"
-        class="hidden xl:flex flex-row gap-10 text-white font-GenJyuuGothicBold tracking-[1px] sm:tracking-[1px]"
+        class="hidden xl:flex flex-row gap-10 text-white font-GenJyuuGothicRegular font-normal sm:tracking-[1px]"
       >
         <a
           href="#about-us"
@@ -105,42 +105,9 @@
         <div class="px-10">
           <img src="/logo.png" class="w-[90px]">
         </div>
-        <!-- <ul
-          class="flex flex-row gap-[1.5px] text-white font-GenJyuuGothicBold"
-        >
-          <li
-            @click.prevent="$i18n.setLocale('zh-tw'); isMobileMenuOpen = false;"
-            class="border-2 rounded-xl py-1 px-2 text-[#242870] text-[14px] cursor-pointer transition-colors duration-300"
-            :class="{
-              'bg-white text-[#242870] border-white': $i18n.locale === 'zh-tw',
-              'border-white text-white': $i18n.locale !== 'zh-tw',
-            }"
-          >
-            中
-          </li>
-          <li
-            @click.prevent="$i18n.setLocale('en'); isMobileMenuOpen = false;"
-            class="border-2 rounded-xl py-1 px-2 text-[#242870] text-[14px] cursor-pointer transition-colors duration-300"
-            :class="{
-              'bg-white text-[#242870] border-white': $i18n.locale === 'en',
-              'border-white text-white': $i18n.locale !== 'en',
-            }"
-          >
-            En
-          </li>
-          <li
-            @click.prevent="$i18n.setLocale('ja'); isMobileMenuOpen = false;"
-            class="border-2 rounded-xl py-1 px-2 text-[#242870] text-[14px] cursor-pointer transition-colors duration-300"
-            :class="{
-              'bg-white text-[#242870] border-white': $i18n.locale === 'ja',
-              'border-white text-white': $i18n.locale !== 'ja',
-            }"
-          >
-            日
-          </li>
-        </ul> -->
+
         <nav
-          class="flex flex-col gap-6 text-[#242870] font-GenJyuuGothicBold tracking-[1px] sm:tracking-[1px] items-start px-10"
+          class="flex flex-col gap-6 text-[#242870] font-GenJyuuGothicRegular tracking-[1px] sm:tracking-[1px] items-start px-10"
         >
           <a
             href="#about-us"
