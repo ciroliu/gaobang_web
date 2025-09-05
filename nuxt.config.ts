@@ -10,7 +10,7 @@ export default defineNuxtConfig({
     }
   },
   plugins: [
-    '~/plugins/toastify.ts' // 手動設定
+    '~/plugins/toastify.ts'
   ],
   css: [
     '@/assets/css/main.css'
@@ -19,7 +19,6 @@ export default defineNuxtConfig({
     '@nuxtjs/tailwindcss',
     '@hypernym/nuxt-gsap',
     '@nuxtjs/i18n',
-    'nuxt-swiper'
   ],
   i18n: {
     langDir: 'locales',

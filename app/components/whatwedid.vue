@@ -2,70 +2,94 @@
     <section 
     id="projects"
     class="bg-white w-full h-screen flex justify-center items-center">
-        <div class="max-w-[75%] w-full flex flex-col justify-center items-start">
-            <ul class="w-full font-GenJyuuGothicBold tracking-[1px] sm:tracking-[1px] text-[48px] text-gradient-4-colors mb-10">
+        <div class="w-full flex flex-col justify-center items-start">
+            <ul class="w-full font-GenJyuuGothicBold tracking-[1px] sm:tracking-[1px] text-[48px] text-gradient-4-colors mb-10 ml-[13%]">
                 <li>What We Did</li>
             </ul>
             
             <div class="w-full flex flex-col xl:flex-row justify-center items-start">
-                <div class="w-full xl:w-[35%]">
+                <div class="w-full xl:w-1/5 ml-[13%]">
                     <ul class="px-0 xl:px-10 mb-10">
                         <li class="mb-6 text-[32px] font-bold text-[#606060] tracking-[1.5px] font-GenJyuuGothicRegular">過往精選案例</li>
-                        <li class="text-[14px] text-[#606060] tracking-[1.5px] font-GenJyuuGothicRegular">高邦創意擁有豐富的展覽策劃經驗，從企劃撰寫到活動落地，我們已成功主辦多場大型動漫IP 展覽。</li>
+                        <li class="hidden xl:flex text-[14px] text-[#606060] tracking-[1.5px] font-GenJyuuGothicRegular">高邦創意擁有豐富的展覽策劃經驗，從企劃撰寫到活動落地，我們已成功主辦多場大型動漫IP 展覽。</li>
+                        <li class="flex xl:hidden text-[14px] text-[#606060] tracking-[1.5px] font-GenJyuuGothicRegular">高邦創意擁有豐富的展覽策劃經驗，<br>從企劃撰寫到活動落地，我們已成功<br>主辦多場大型動漫IP 展覽。</li>
                     </ul>
                 </div>
 
-                <div class="w-full xl:w-[120%] flex flex-row justify-center items-center">
+                <div class="w-full xl:w-4/5 flex flex-row justify-center items-center pl-[13%]">
                   <!-- -->
-<div class="relative w-full overflow-x-auto snap-x hide-scrollbar xl:overflow-x-visible xl:whitespace-nowrap">
-    <div class="flex flex-row gap-6 whitespace-nowrap xl:flex-nowrap">
-        <div class="snap-start inline-block cursor-pointer w-full xl:w-auto" @click="openModal1">
-            <img src="/slider-1.png" class="w-full" />
+<div class="relative group">
+    <!-- 可橫向滾動的容器 -->
+    <div
+      ref="scroller"
+      class="relative w-full overflow-x-auto snap-x snap-mandatory hide-scrollbar scroll-smooth xl:overflow-x-visible"
+    >
+      <div class="flex flex-row gap-14 sm:gap-10 xl:gap-6 whitespace-nowrap h-[60vh] xl:h-auto items-center">
+
+        <!-- 卡片 1 -->
+        <div
+          class="snap-center min-w-[95%] sm:min-w-[60%] md:min-w-[50%] xl:min-w-0 h-full flex justify-center items-center cursor-pointer"
+          @click="openModal1"
+        >
+          <img src="/slider-1.png" class="h-full w-auto object-contain" />
         </div>
-        
-        <div class="snap-start inline-block w-full xl:w-auto">
-            <img src="/slider-2.png" class="w-full" />
+
+        <!-- 卡片 2 -->
+        <div
+          class="snap-center min-w-[95%] sm:min-w-[60%] md:min-w-[50%] xl:min-w-0 h-full flex justify-center items-center"
+        >
+          <img src="/slider-2.png" class="h-full w-auto object-contain" />
         </div>
-        
-        <div class="snap-start inline-block w-full xl:w-auto">
-            <div class="relative flex justify-center items-center">
-                <img src="/slider-3.png" class="w-full h-full object-cover" />
-                <ul class="absolute text-left px-8">
-                    <li class="text-white tracking-[1.5px] text-[24px] font-GenJyuuGothicBold">MORE …</li>
-                    <li class="mt-6 text-white text-[12px] tracking-[1.5px] font-GenJyuuGothicRegular">因保密協議無法公開，協助<br>多項國際IP推動大型/政府活動</li>
-                </ul>
-            </div>
+
+        <!-- 卡片 3 -->
+        <div
+          class="snap-center min-w-[95%] sm:min-w-[60%] md:min-w-[50%] xl:min-w-0 h-full flex justify-center items-center"
+        >
+          <div class="relative flex justify-center items-center h-full w-full pr-20 sm:pr-0">
+            <img src="/slider-3.png" class="h-full w-auto object-contain" />
+            <ul class="absolute text-left px-8">
+              <li class="text-white tracking-[1.5px] text-[24px] font-GenJyuuGothicBold">
+                MORE …
+              </li>
+              <li class="mt-6 text-white text-[12px] tracking-[1.5px] font-GenJyuuGothicRegular">
+                因保密協議無法公開，協助<br />多項國際IP推動大型/政府活動
+              </li>
+            </ul>
+          </div>
         </div>
+      </div>
     </div>
-</div>
+
+    <!-- 左側箭頭 -->
+    <a
+      v-show="canLeft"
+      @click="scrollLeft"
+      class="absolute left-4 top-1/2 -translate-y-1/2
+             opacity-0 group-hover:opacity-100 transition
+             bg-black/60 hover:bg-black/80 text-white
+             rounded-full w-10 h-10 flex items-center justify-center
+             backdrop-blur pointer-events-auto cursor-pointer"
+    >
+      &lt;
+  </a>
+
+    <!-- 右側箭頭 -->
+    <a
+      v-show="canRight"
+      @click="scrollRight"
+      class="absolute right-4 top-1/2 -translate-y-1/2
+             opacity-0 group-hover:opacity-100 transition
+             bg-black/60 hover:bg-black/80 text-white
+             rounded-full w-10 h-10 flex items-center justify-center
+             backdrop-blur pointer-events-auto cursor-pointer"
+    >
+      &gt;
+  </a>
+  </div>
+
                   <!-- -->
 
                 </div>
-                <!-- <div class="w-full xl:w-[120%] flex flex-row gap-4 justify-center items-center">
-
-                  <div class="snap-x flex flex-row gap-6">
-
-                    <div class="snap-start " @click="openModal1">
-                      <img src="/slider-1.png" class="w-full" />
-                    </div>
-                    <div class="snap-start">
-                      <img src="/slider-2.png" class="w-full" />
-                    </div>
-                    <div class="snap-start">
-                      <div class="relative flex justify-center items-center">
-                        <img src="/slider-3.png" class="w-full h-full object-cover" />
-                        <ul class="absolute text-center px-8">
-                          <li class="text-white">More …</li>
-                          <li class="mt-6 text-white">
-                            因保密協議無法公開，協助多項國際IP推動大型/政府活動
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                    
-                  </div>
-
-                </div> -->
 
             </div>
         </div>
@@ -105,16 +129,7 @@
 </template>
 
 <script setup lang="ts">
-import { Swiper, SwiperSlide } from 'swiper/vue'
-import { Autoplay, Navigation } from 'swiper/modules'
-
-import 'swiper/css'
-import 'swiper/css/navigation'
-
-const modules = [Autoplay, Navigation]
-
 const isOpen1 = ref(false);
-
 
 function openModal1() {
   isOpen1.value = true;
@@ -124,12 +139,54 @@ function closeModal1() {
   isOpen1.value = false;
 }
 
+const scroller = ref(null)
+const canLeft = ref(false)
+const canRight = ref(false)
+
+const update = () => {
+  const el = scroller.value
+  if (!el) return
+  canLeft.value = el.scrollLeft > 0
+  canRight.value = el.scrollLeft + el.clientWidth < el.scrollWidth - 1
+}
+
+const scrollLeft = () => {
+  const el = scroller.value
+  if (!el) return
+  el.scrollBy({ left: -el.clientWidth * 0.8, behavior: 'smooth' })
+}
+
+const scrollRight = () => {
+  const el = scroller.value
+  if (!el) return
+  el.scrollBy({ left: el.clientWidth * 0.8, behavior: 'smooth' })
+}
+
+let ro
+
+onMounted(() => {
+  update()
+  scroller.value?.addEventListener('scroll', update, { passive: true })
+  window.addEventListener('resize', update)
+  ro = new ResizeObserver(update)
+  ro.observe(scroller.value)
+})
+
+onBeforeUnmount(() => {
+  scroller.value?.removeEventListener('scroll', update)
+  window.removeEventListener('resize', update)
+  ro?.disconnect()
+})
 </script>
 
 <style scoped>
-.mySwiper {
-  width: 100%;
-  height: 500px; /* 可依需求調整高度 */
+/* 隱藏卷軸 */
+.hide-scrollbar {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE/Edge */
+}
+.hide-scrollbar::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
 }
 
 button {
