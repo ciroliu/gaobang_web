@@ -10,7 +10,7 @@
           class="border-2 rounded-xl py-1 px-2 text-[14px] cursor-pointer transition-colors duration-300"
           :class="{
             'bg-white border-white text-[#242870]': $i18n.locale === 'zh-tw',
-            'bg-transparent text-white border-white': $i18n.locale !== 'zh-tw',
+            'border-white text-white': $i18n.locale !== 'zh-tw',
           }"
         >
           中

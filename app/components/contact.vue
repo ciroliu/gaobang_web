@@ -132,8 +132,8 @@
                     </li>
                 </ul>
             </div>
-            <div class="flex-1 text-[12px] text-center">台北辦公室：台北市大同區市民大道一段209號12樓</div>
-            <div class="flex-1 text-[12px] text-center">Copyright © 2025 GAO BANG CREATIVITY All Rights Reserved 2021</div>
+            <div class="flex-1 text-[12px] text-center tracking-[1.5px]">台北辦公室：台北市大同區市民大道一段209號12樓</div>
+            <div class="flex-1 text-[12px] text-center tracking-[1.5px]">Copyright © 2025 GAO BANG CREATIVITY All Rights Reserved 2021</div>
         </div>
     </footer>
     <footer class="flex xl:hidden w-full absolute bottom-0 h-[240px] bg-[#242870]">
@@ -152,9 +152,9 @@
                     </li>
                 </ul>
             </div>
-            <div class="text-[12px] text-center">台北辦公室：台北市大同區市民大道一段209號12樓</div>
+            <div class="text-[10px] text-center tracking-[1.25px]">台北辦公室：台北市大同區市民大道一段209號12樓</div>
             <hr class="bg-white h-[1px] w-full my-6">
-            <div class="text-[12px] text-center">Copyright © 2025 GAO BANG CREATIVITY All Rights Reserved 2021</div>
+            <div class="text-[10px] text-center tracking-[1.25px]">Copyright © 2025 GAO BANG CREATIVITY All Rights Reserved 2021</div>
         </div>
     </footer>
     </section>
