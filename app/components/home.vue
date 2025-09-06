@@ -1,5 +1,6 @@
 <template>
     <section 
+    id="first-section"
     ref="bg_one"
     class="w-full h-screen flex flex-col justify-center items-center">
             <img 
@@ -44,16 +45,16 @@ onMounted(() => {
     "(min-width: 368px) and (max-width: 479px)": () => {
       // logo 動畫
       $gsap.from(logo.value, {
-        y: 4000,
+        y: 500,
         opacity: 0,
         scale: 0,
         duration: 0.75,
       })
       $gsap.to(logo.value, {
         scrollTrigger: {
-          trigger: logo.value,
+          trigger: '#first-section',
           start: "top -80",
-          end: "bottom top",
+          end: "7300px",
           toggleClass: {
             className: 'logo-to',
             targets: logo.value
@@ -65,7 +66,7 @@ onMounted(() => {
 
       // logotxt 動畫
       $gsap.from(logotxt.value, {
-        y: 2000,
+        y: 500,
         opacity: 0,
         scale: 0,
         delay: 1,
@@ -73,9 +74,9 @@ onMounted(() => {
       })
       $gsap.to(logotxt.value, {
         scrollTrigger: {
-          trigger: logotxt.value,
+          trigger: '#first-section',
           start: "top -10",
-          end: "bottom top",
+          end: "7300px",
           toggleClass: {
             className: 'logotxt-to',
             targets: logotxt.value
@@ -87,7 +88,7 @@ onMounted(() => {
     "(min-width: 480px)": () => {
           //
         $gsap.from(logo.value, {
-            y: 4000,
+            y: 2000,
             opacity: 0,
             scale: 0,
             duration: 0.75,
