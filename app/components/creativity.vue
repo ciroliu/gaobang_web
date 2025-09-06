@@ -2,7 +2,7 @@
     <section 
     id="about-us"
     class="bg-white w-full h-full xl:h-screen flex justify-center items-center">
-        <div class="max-w-[75%] w-full">
+        <div class="max-w-[75%] w-full z-10">
             <ul class="font-GenJyuuGothicBold tracking-[1px] sm:tracking-[1px] text-[48px] text-gradient-4-colors mb-10 mt-20 xl:mt-0">
                 <li>Creativity</li>
                 <li>Happiness</li>

@@ -11,7 +11,7 @@
             loading="lazy">
             <h5 
             ref="logotxt"
-            class="fixed flex justify-center items-center mt-[12rem] sm:mt-60 text-[1.5rem] sm:text-2xl md:text-[1.7rem] md:leading-10 text-white font-GenJyuuGothicBold tracking-[1px] sm:tracking-[1px] z-40" 
+            class="fixed flex justify-center items-center mt-[12rem] sm:mt-60 text-[1.5rem] sm:text-2xl md:text-[1.7rem] md:leading-10 text-white font-GenJyuuGothicBold tracking-[1px] sm:tracking-[1px] z-[101]" 
             style="text-indent: 0em;">GAO BANG CREATIVITY</h5>
             <span 
             ref="lineone"

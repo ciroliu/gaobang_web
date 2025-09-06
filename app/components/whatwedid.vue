@@ -2,7 +2,7 @@
     <section 
     id="projects"
     class="bg-white w-full h-screen flex justify-center items-center">
-        <div class="w-full flex flex-col justify-center items-start">
+        <div class="w-full flex flex-col justify-center items-start z-10">
             <ul class="w-full font-GenJyuuGothicBold tracking-[1px] sm:tracking-[1px] text-[48px] text-gradient-4-colors mb-10 ml-[13%]">
                 <li>What We Did</li>
             </ul>
