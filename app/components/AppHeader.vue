@@ -69,10 +69,11 @@
       </nav>
       <!-- menu -->
       <div
-        class="absolute xl:hidden top-0 right-4 cursor-pointer"
-        @click="isMobileMenuOpen = !isMobileMenuOpen"
+      class="absolute xl:hidden top-0 right-4 cursor-pointer"
+      @click="isMobileMenuOpen = !isMobileMenuOpen"
       >
         <svg
+          ref="menu"
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
           viewBox="0 0 24 24"
@@ -196,6 +197,7 @@ const ja = ref(null);
 const isMobileMenuOpen = ref(false);
 const localeLinks = ref(null);
 const isScrolled = ref(false);
+const menu = ref(null);
 
 const selectedClasses = 'bg-white text-[#242870] border-white';
 const defaultClasses = 'border-white text-white';
@@ -260,10 +262,28 @@ onMounted(() => {
   // GSAP 動畫
   $ScrollTrigger.matchMedia({
     "(min-width: 368px) and (max-width: 479px)": () => {
-      // logo 動畫
-
+      // 
+      $gsap.to(menu.value, {
+        color: '#242870', 
+        scrollTrigger: {
+          trigger: 'body',
+          start: 'top -900px',
+          end: '+=10',
+          scrub: true,
+        }
+      });
     },
     "(min-width: 480px)": () => {
+          //
+          $gsap.to(menu.value, {
+            color: '#242870', 
+            scrollTrigger: {
+              trigger: 'body',
+              start: 'top -900px',
+              end: '+=10',
+              scrub: true,
+            }
+          });
           // nav
           $gsap.to(navLinks.value, {
             color: '#242870', 
