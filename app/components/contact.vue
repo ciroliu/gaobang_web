@@ -137,7 +137,7 @@
             <div class="flex-1 text-[12px] text-center tracking-[1.5px] font-GenJyuuGothicRegular">Copyright © 2025 GAO BANG CREATIVITY All Rights Reserved 2021</div>
         </div>
     </footer>
-    <footer class="flex xl:hidden w-full absolute bottom-0 h-[240px] bg-[#242870]">
+    <footer class="flex xl:hidden w-full absolute bottom-0 h-[240px] bg-[#242870] flex justify-center">
         <div class="flex flex-col justify-center items-center h-full px-10 text-white">
             <div class="flex justify-start items-center my-6">
                 <ul class="flex flex-row gap-8 justify-center items-center">
