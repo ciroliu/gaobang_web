@@ -131,7 +131,7 @@
 
 </template>
 
-<script setup lang="ts">
+<script setup>
 const isOpen1 = ref(false);
 
 function openModal1() {
