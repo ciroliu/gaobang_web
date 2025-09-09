@@ -9,8 +9,8 @@
               </ul>
             </div>
 
-            <div class="w-full xl:w-5/6 flex flex-row justify-center items-start gap-6 mx-auto">
-                <div class="w-full xl:w-1/2">
+            <div class="w-full xl:w-full flex flex-row justify-center items-start gap-6 xl:pr-48">
+                <div class="w-full xl:w-[620px]">
                     <form 
                     @submit="submitForm" 
                     id="form">
