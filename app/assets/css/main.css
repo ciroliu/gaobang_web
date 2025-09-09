@@ -345,7 +345,7 @@ html {
 }
 
 .all-colors {
-  position: fixed;
+  position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
@@ -354,7 +354,7 @@ html {
 }
 
 .color {
-  position: fixed;
+  position: absolute;
   border-radius: 100%;
   animation: fade-scale 8s infinite;  
   opacity: 0;
@@ -372,6 +372,21 @@ html {
 
 .color-orange {
   background: #FFC500;
+  animation-delay: 0.75s;    
+}
+
+.color-y {
+  background: #FFC500;
+  animation-delay: 0.75s;    
+}
+
+.color-o {
+  background: #EE783B;
+  animation-delay: 0.5s;  
+}
+
+.color-p {
+  background: #ED0081;
   animation-delay: 0.75s;    
 }
 
