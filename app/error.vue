@@ -29,7 +29,7 @@
 
 <script setup>
 useHead({
-  title: 'Error - 找不到此頁面',
+  title: '404 - 找不到此頁面',
 });
 
 const props = defineProps({
