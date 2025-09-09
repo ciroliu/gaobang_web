@@ -7,7 +7,7 @@
                 <li>What We Did</li>
             </ul>
             
-            <div class="w-full flex flex-col xl:flex-row justify-center items-start mb-20">
+            <div class="w-full flex flex-col 2xl:flex-row justify-center items-start mb-20">
                 <div class="w-full xl:w-1/5 ml-[13%]">
                     <ul class="px-0 xl:px-10 mb-10">
                         <li class="mb-6 text-[32px] font-bold text-[#606060] tracking-[1.5px] font-GenJyuuGothicRegular">過往精選案例</li>
@@ -16,9 +16,9 @@
                     </ul>
                 </div>
 
-                <div class="w-full xl:w-4/5 flex flex-row justify-center items-center pl-[13%]">
+                <div class="w-full xl:w-4/5 flex flex-col xl:flex-row justify-center items-center xl:pl-[13%]">
                   <!-- -->
-                  <div class="relative group">
+                  <div class="hidden xl:flex relative group">
                       <!-- 可橫向滾動的容器 -->
                       <div
                         ref="scroller"
@@ -89,8 +89,27 @@
                           <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
                         </svg>
                     </a>
-                    </div>
+                  </div>
 
+                  <div class="flex xl:hidden flex-col gap-10 px-10">
+                            <div>
+                              <img src="/slider-1.webp">
+                            </div>
+                            <div>
+                              <img src="/slider-2.webp">
+                            </div>
+                            <div class="relative flex justify-center items-center bg-gradient-to-r from-[#ED0081] via-[#F13630] via-[#EE783B] to-[#FFC500] h-[400px] w-full rounded-[30px]">
+                              <!-- <img src="/slider-3.webp" class="h-full w-auto object-contain" /> -->
+                              <ul class="absolute text-left px-8">
+                                <li class="text-white tracking-[1.5px] text-[24px] font-GenJyuuGothicBold">
+                                  MORE …
+                                </li>
+                                <li class="mt-6 text-white text-[12px] tracking-[1.5px] font-GenJyuuGothicRegular">
+                                  因保密協議無法公開，協助<br />多項國際IP推動大型/政府活動
+                                </li>
+                              </ul>
+                            </div>
+                  </div>
                   <!-- -->
 
                 </div>
