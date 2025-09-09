@@ -154,7 +154,7 @@
                     </a>
                   </div>
 
-                  <div class="flex xl:hidden flex-col gap-10 px-10">
+                  <div class="flex xl:hidden flex-col justify-center items-center gap-10 px-10">
                             <div>
                               <img src="/slider-1.webp">
                             </div>
@@ -162,7 +162,6 @@
                               <img src="/slider-2.webp">
                             </div>
                             <div class="relative flex justify-center items-center bg-gradient-to-r from-[#ED0081] via-[#F13630] via-[#EE783B] to-[#FFC500] h-[400px] w-full rounded-[30px]">
-                              <!-- <img src="/slider-3.webp" class="h-full w-auto object-contain" /> -->
                               <ul class="absolute text-left px-8">
                                 <li class="text-white tracking-[1.5px] text-[24px] font-GenJyuuGothicBold">
                                   MORE …
