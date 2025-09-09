@@ -2,7 +2,7 @@
     <section 
     id="first-section"
     ref="bg_one"
-    class="relative bg-gradient-to-t from-[#ED0081] to-[#F13630] w-full h-screen flex flex-col justify-center items-center">
+    class="relative bg-gradient-to-t from-[#ED0081] to-[#F13630] w-full h-screen flex flex-col justify-center items-center z-20">
       <div class="all-colors">
             <div class="color color-orange absolute left-8 bottom-8 w-[600px] h-[600px] blur-[180px]"></div>
             <div class="color color-pink absolute right-8 -bottom-32 w-[600px] h-[600px] blur-[180px]"></div>
