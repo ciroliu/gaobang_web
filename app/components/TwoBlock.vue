@@ -97,21 +97,21 @@
                             class="snap-center min-w-[95%] sm:min-w-[60%] md:min-w-[50%] xl:min-w-0 h-full flex justify-center items-center cursor-pointer"
                             @click="openModal1"
                           >
-                            <img src="/slider-1.webp" class="h-full w-auto object-contain" />
+                            <img src="/slider-1.webp" class="h-full w-auto object-contain" loading="lazy" />
                           </div>
 
                           <div
                             class="snap-center min-w-[95%] sm:min-w-[60%] md:min-w-[50%] xl:min-w-0 h-full flex justify-center items-center cursor-pointer"
                             @click="openModal2"
                           >
-                            <img src="/slider-2.webp" class="h-full w-auto object-contain" />
+                            <img src="/slider-2.webp" class="h-full w-auto object-contain" loading="lazy" />
                           </div>
 
                           <div
                             class="snap-center min-w-[95%] sm:min-w-[60%] md:min-w-[50%] xl:min-w-0 h-full flex justify-center items-center"
                           >
                             <div class="relative flex justify-center items-center h-full w-full pr-20 sm:pr-0">
-                              <img src="/slider-3.webp" class="h-full w-auto object-contain" />
+                              <img src="/slider-3.webp" class="h-full w-auto object-contain" loading="lazy"/>
                               <ul class="absolute text-left px-8">
                                 <li class="text-white tracking-[1.5px] text-[24px] font-GenJyuuGothicBold">
                                   MORE …
@@ -156,10 +156,10 @@
 
                   <div class="flex xl:hidden flex-col justify-center items-center gap-10 px-10">
                             <div class="cursor-pointer" @click="openModal1">
-                              <img src="/slider-1.webp">
+                              <img src="/slider-1.webp" loading="lazy">
                             </div>
                             <div class="cursor-pointer" @click="openModal2">
-                              <img src="/slider-2.webp">
+                              <img src="/slider-2.webp" loading="lazy">
                             </div>
                             <div class="relative flex justify-center items-center bg-gradient-to-r from-[#ED0081] via-[#F13630] via-[#EE783B] to-[#FFC500] h-[400px] max-w-[440px] w-full rounded-[30px]">
                               <ul class="absolute text-left px-8">
@@ -207,7 +207,7 @@
             <p class="text-gray-700 text-[12px] font-GenJyuuGothicRegular">首次結合「五感體驗」，以知覺、視覺、聽覺、觸覺及味覺做完美結合，首度展場加入輕食區，超越以往展覽規模，24隻大型公仔現身，其中更有 Big Mom 425公分高讓粉絲驚嘆不已，更為台灣首次曝光 ！展期導入 AR 互動及電子集章活動，讓粉絲能夠在回味劇情，還能留下紀念。</p>
           </div>
           <div class="w-full xl:w-2/3">
-            <img src="/whatdid.webp" class="w-full">
+            <img src="/whatdid.webp" class="w-full" loading="lazy">
           </div>
         </div>
       </div>
@@ -240,7 +240,7 @@
             <p class="text-gray-700 text-[12px] font-GenJyuuGothicRegular">首場於台灣屏東展開，最靠近大海的主題活動，連結「海洋」與「運動」，並與國立海洋生物博物館合作，以「全⺠皆能參與」運動會概念， 串連夏波帝諸島故事背景，結合慢跑、泡泡關卡及一百米滑⽔水道。</p>
           </div>
           <div class="w-full xl:w-2/3">
-            <img src="/ONE-PIECE-SPORT.webp" class="w-full">
+            <img src="/ONE-PIECE-SPORT.webp" class="w-full" loading="lazy">
           </div>
         </div>
       </div>
