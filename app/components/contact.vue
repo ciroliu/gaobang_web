@@ -1,13 +1,15 @@
 <template>
     <section 
     id="contact"
-    class="relative bg-[#F4F5F9] w-full h-[1600px] xl:h-screen flex justify-center items-center">
-        <div class="max-w-[75%] w-full">
-            <ul class="font-GenJyuuGothicBold tracking-[1px] sm:tracking-[1px] text-[48px] text-gradient-4-colors mb-10">
+    class="relative bg-[#F4F5F9] w-full h-[1600px] xl:h-screen flex flex-col justify-center items-center">
+        <div class="max-w-[75%] w-full flex flex-col xl:flex-row">
+            <div class="w-full xl:w-1/6">
+              <ul class="font-GenJyuuGothicBold tracking-[1px] sm:tracking-[1px] text-[48px] text-gradient-4-colors mb-10">
                 <li>Contact</li>
-            </ul>
+              </ul>
+            </div>
 
-            <div class="w-full flex flex-row justify-center items-start gap-6 mx-auto">
+            <div class="w-full xl:w-5/6 flex flex-row justify-center items-start gap-6 mx-auto">
                 <div class="w-full xl:w-1/2">
                     <form 
                     @submit="submitForm" 
@@ -110,11 +112,10 @@
                 </div>
 
             </div>
-
-            <div class="flex flex-col justify-center items-center mb-40 2xl:mb-0">
-                <h5 class="font-GenJyuuGothicBold tracking-[1px] sm:tracking-[1px] text-[16px] xl:text-[24px] contact-text-gradient-4-colors mb-4 whitespace-nowrap">期待您的加入，與我們一同創造無限可能。</h5>
-                <p class="text-[12px] text-[#606060] tracking-[2px] text-center font-GenJyuuGothicRegular">Make dreams come true, make everything happen.</p>
-            </div>
+        </div>
+        <div class="flex flex-col justify-center items-center mb-40 2xl:mb-0">
+          <h5 class="font-GenJyuuGothicBold tracking-[1px] sm:tracking-[1px] text-[16px] xl:text-[24px] contact-text-gradient-4-colors mb-4 whitespace-nowrap">期待您的加入，與我們一同創造無限可能。</h5>
+           <p class="text-[12px] text-[#606060] tracking-[2px] text-center font-GenJyuuGothicRegular">Make dreams come true, make everything happen.</p>
         </div>
     <footer class="w-full absolute bottom-0 h-[60px] bg-[#242870] hidden xl:flex">
         <div class="flex justify-between items-center h-full px-10 text-white w-full">

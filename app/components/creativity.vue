@@ -9,7 +9,7 @@
       </div>
 
 
-        <div class="max-w-[75%] w-full z-10">
+        <div class="max-w-[75%] w-full z-10 pb-20">
             <ul class="font-GenJyuuGothicBold tracking-[1px] sm:tracking-[1px] text-[48px] text-gradient-4-colors mb-10 mt-20 xl:mt-0">
                 <li>Creativity</li>
                 <li>Happiness</li>

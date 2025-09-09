@@ -8,7 +8,7 @@
         <div class="color color-p absolute left-72 -bottom-[140px] w-[300px] h-[300px] blur-[100px]"></div>
       </div>
         <div class="w-full flex flex-col justify-center items-start z-10">
-            <ul class="w-full font-GenJyuuGothicBold tracking-[1px] sm:tracking-[1px] text-[48px] text-gradient-4-colors mt-40 xl:mt-0 mb-10 ml-[13%]">
+            <ul class="w-full font-GenJyuuGothicBold tracking-[1px] sm:tracking-[1px] text-[48px] text-gradient-4-colors mt-40 xl:mt-20 mb-10 ml-[13%]">
                 <li>What We Did</li>
             </ul>
             
