@@ -161,7 +161,7 @@
                             <div class="cursor-pointer" @click="openModal2">
                               <img src="/slider-2.webp">
                             </div>
-                            <div class="relative flex justify-center items-center bg-gradient-to-r from-[#ED0081] via-[#F13630] via-[#EE783B] to-[#FFC500] h-[400px] w-full rounded-[30px]">
+                            <div class="relative flex justify-center items-center bg-gradient-to-r from-[#ED0081] via-[#F13630] via-[#EE783B] to-[#FFC500] h-[400px] max-w-[440px] w-full rounded-[30px]">
                               <ul class="absolute text-left px-8">
                                 <li class="text-white tracking-[1.5px] text-[24px] font-GenJyuuGothicBold">
                                   MORE …
@@ -250,17 +250,13 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue'
-
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
-
-const container = ref(null);
-
 const { $gsap, $ScrollTrigger } = useNuxtApp();
 
+const container = ref(null);
 const isOpen1 = ref(false);
 const isOpen2 = ref(false);
 

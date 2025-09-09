@@ -3,13 +3,13 @@
     id="contact"
     class="relative bg-[#F4F5F9] w-full h-[1600px] xl:h-screen flex flex-col justify-center items-center">
         <div class="max-w-[75%] w-full flex flex-col xl:flex-row">
-            <div class="w-full xl:w-1/6 absolute">
+            <div class="w-full xl:w-1/6 xl:absolute">
               <ul class="font-GenJyuuGothicBold tracking-[1px] sm:tracking-[1px] text-[48px] text-gradient-4-colors mb-10">
                 <li>Contact</li>
               </ul>
             </div>
 
-            <div class="w-full xl:w-full flex flex-row justify-center items-start gap-6">
+            <div class="w-full flex flex-row justify-center items-start gap-6">
                 <div class="w-full xl:w-[620px]">
                     <form 
                     @submit="submitForm" 

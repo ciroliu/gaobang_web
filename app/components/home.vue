@@ -37,7 +37,6 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted } from 'vue'
 const currentYear = computed(() => new Date().getFullYear());
 const logo = ref<HTMLElement | null>(null);
 const logotxt = ref<HTMLElement | null>(null);

@@ -5,10 +5,8 @@
         <AppHeader />
         <!--  -->
         <home />
-        <!--  -->
-        <!-- <creativity /> -->
         <!-- -->
-        <whatwedid />
+        <TwoBlock />
         <!-- -->
         <ourpartner />
         <!-- -->

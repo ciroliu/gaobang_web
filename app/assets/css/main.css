@@ -1,5 +1,3 @@
-/* assets/css/main.css */
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -37,11 +35,6 @@ html {
   scroll-behavior: smooth;
 }
 
-/* body {
-  background: #ED0081;
-  transition: background-color 0.5s ease;
-} */
-
 .logo {
     position: fixed;
     right: 50%;
@@ -59,7 +52,6 @@ html {
     right: 2rem;
 }
 .topbgtxt-to {
-/*    display: flex;*/
     -webkit-animation: topfadeOut 0.5s;
     animation: topfadeOut 0.5s;
     -webkit-animation-iteration-count:  1;
@@ -113,148 +105,6 @@ html {
         clip-path: inset(100% 0 0 0);
     }
 }
-/* @keyframes text-flicker-out-glow {
-  0% {
-    opacity: 1;
-    text-shadow: 0 0 30px rgba(255, 255, 255, 0.6),
-      0 0 60px rgba(255, 255, 255, 0.45), 0 0 110px rgba(255, 255, 255, 0.25),
-      0 0 100px rgba(255, 255, 255, 0.1);
-  }
-  13.9% {
-    opacity: 1;
-    text-shadow: 0 0 30px rgba(255, 255, 255, 0.6),
-      0 0 60px rgba(255, 255, 255, 0.45), 0 0 110px rgba(255, 255, 255, 0.25),
-      0 0 100px rgba(255, 255, 255, 0.1);
-  }
-  14% {
-    opacity: 0.2;
-    text-shadow: none;
-  }
-  14.9% {
-    opacity: 0.2;
-    text-shadow: none;
-  }
-  15% {
-    opacity: 1;
-    text-shadow: 0 0 30px rgba(255, 255, 255, 0.55),
-      0 0 60px rgba(255, 255, 255, 0.4), 0 0 110px rgba(255, 255, 255, 0.2),
-      0 0 100px rgba(255, 255, 255, 0.1);
-  }
-  22.9% {
-    opacity: 1;
-    text-shadow: 0 0 30px rgba(255, 255, 255, 0.55),
-      0 0 60px rgba(255, 255, 255, 0.4), 0 0 110px rgba(255, 255, 255, 0.2),
-      0 0 100px rgba(255, 255, 255, 0.1);
-  }
-  23% {
-    opacity: 0.2;
-    text-shadow: none;
-  }
-  24.9% {
-    opacity: 0.2;
-    text-shadow: none;
-  }
-  25% {
-    opacity: 1;
-    text-shadow: 0 0 30px rgba(255, 255, 255, 0.55),
-      0 0 60px rgba(255, 255, 255, 0.35), 0 0 100px rgba(255, 255, 255, 0.1);
-  }
-  34.9% {
-    opacity: 1;
-    text-shadow: 0 0 30px rgba(255, 255, 255, 0.55),
-      0 0 60px rgba(255, 255, 255, 0.35), 0 0 100px rgba(255, 255, 255, 0.1);
-  }
-  35% {
-    opacity: 0.2;
-    text-shadow: none;
-  }
-  39.9% {
-    opacity: 0.2;
-    text-shadow: none;
-  }
-  40% {
-    opacity: 1;
-    text-shadow: 0 0 30px rgba(255, 255, 255, 0.55),
-      0 0 60px rgba(255, 255, 255, 0.35);
-  }
-  42.9% {
-    opacity: 1;
-    text-shadow: 0 0 30px rgba(255, 255, 255, 0.55),
-      0 0 60px rgba(255, 255, 255, 0.35);
-  }
-  43% {
-    opacity: 0.2;
-    text-shadow: none;
-  }
-  44.9% {
-    opacity: 0.2;
-    text-shadow: none;
-  }
-  45% {
-    opacity: 1;
-    text-shadow: 0 0 30px rgba(255, 255, 255, 0.45),
-      0 0 60px rgba(255, 255, 255, 0.25);
-  }
-  50% {
-    opacity: 1;
-    text-shadow: 0 0 30px rgba(255, 255, 255, 0.45),
-      0 0 60px rgba(255, 255, 255, 0.25);
-  }
-  54.9% {
-    opacity: 1;
-    text-shadow: 0 0 30px rgba(255, 255, 255, 0.45),
-      0 0 60px rgba(255, 255, 255, 0.25);
-  }
-  55% {
-    opacity: 0.2;
-    text-shadow: none;
-  }
-  69.4% {
-    opacity: 0.2;
-    text-shadow: none;
-  }
-  69.5% {
-    opacity: 1;
-    text-shadow: 0 0 30px rgba(255, 255, 255, 0.45),
-      0 0 60px rgba(255, 255, 255, 0.25);
-  }
-  69.9% {
-    opacity: 1;
-    text-shadow: 0 0 30px rgba(255, 255, 255, 0.45),
-      0 0 60px rgba(255, 255, 255, 0.25);
-  }
-  70% {
-    opacity: 0.2;
-    text-shadow: none;
-  }
-  79.4% {
-    opacity: 0.2;
-    text-shadow: none;
-  }
-  79.9% {
-    opacity: 1;
-    text-shadow: 0 0 30px rgba(255, 255, 255, 0.25);
-  }
-  80% {
-    opacity: 0.2;
-    text-shadow: none;
-  }
-  89.8% {
-    opacity: 0.2;
-    text-shadow: none;
-  }
-  89.9% {
-    opacity: 1;
-    text-shadow: none;
-  }
-  90% {
-    opacity: 0.2;
-    text-shadow: none;
-  }
-  100% {
-    opacity: 0.2;
-  }
-} */
 
 @media screen and (min-width: 767px) {
     .logo {
@@ -282,37 +132,6 @@ html {
         right: 2rem;
     }
 }
-/* 
-.blurtext {
-  position: relative;
-  width: 35px;
-  line-height: 1.9rem !important;
-  color: #fff;
-}
-.blurtext span {
-  position: absolute;
-  display: block;
-  width: 100%;
-  text-align: center;
-  opacity: 0;
-  line-height: 1.9rem !important;
-  transform: perspective(100px) translateZ(10px);
-  filter: blur(10px);
-}
-.blurtext span.active {
-  opacity: 1;
-  transform: perspective(100px) translateZ(0px);
-  filter: blur(0px);
-  line-height: 1.9rem !important;
-  transition: opacity 1000ms linear, transform 1000ms linear, filter 400ms linear, letter-spacing 1000ms linear;
-}
-.blurtext span.past {
-  opacity: 0;
-  transform: perspective(100px) translateZ(-10px);
-  filter: blur(10px);
-  line-height: 1.9rem !important;
-  transition: opacity 1000ms linear, transform 1000ms linear, filter 400ms linear, letter-spacing 1000ms linear;
-} */
 
 .nall-colors {
   position: absolute;
@@ -428,62 +247,6 @@ html {
     opacity: 0.2;
   }
 }
-/* 
-
-.bg-color-yellow {
-  background: #E6B020;
-}
-.bg-color-white {
-  background: #fff;
-}
-
-.txt-gradient {
-  background: -webkit-linear-gradient(
-    45deg,
-    #9A1184 50%,
-    #E33733 30%,
-    #F4BF20 95%
-  );
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: white;
-}
-
-.txt-gradient-bl {
-  background: -webkit-linear-gradient(
-    45deg,
-    #F4BF20 50%,
-    #E33733 30%,
-    #9A1184 95%
-  );
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: white;
-}
-
-.txt-gradient-br {
-  background: -webkit-linear-gradient(
-    45deg,
-    #9A1184 70%,
-    #E33733 30%,
-    #F4BF20 95%
-  );
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: white;
-}
-
-.txt-color-white {
-  color: white;
-}
-
-.blur200px {
-  -webkit-filter: blur(200px);
-  filter: blur(200px);
-} */
 
 @media screen and (max-width: 767px) {
   input[type="text"],
@@ -496,11 +259,11 @@ html {
 .text-gradient-4-colors {
   background-image: linear-gradient(
     to right, 
-    #ED0081 0%,       /* 紫色從 0% 開始 */
-    #F13630 5%,      /* 紅色從 25% 開始 */
-    #EE783B 10%,      /* 橘色從 50% 開始 */
-    #FFC500 15%,      /* 黃色從 75% 開始 */
-    #FFC500 100%      /* 確保黃色延伸到 100% 結束 */
+    #ED0081 0%,   
+    #F13630 5%,   
+    #EE783B 10%,
+    #FFC500 15%,
+    #FFC500 100%
   );
   
   background-clip: text;
@@ -511,11 +274,11 @@ html {
 .contact-text-gradient-4-colors {
   background-image: linear-gradient(
     to right, 
-    #ED0081 0%,       /* 紫色從 0% 開始 */
-    #F13630 5%,      /* 紅色從 25% 開始 */
-    #EE783B 10%,      /* 橘色從 50% 開始 */
-    #FFC500 75%,      /* 黃色從 75% 開始 */
-    #FFC500 100%      /* 確保黃色延伸到 100% 結束 */
+    #ED0081 0%,
+    #F13630 5%, 
+    #EE783B 10%, 
+    #FFC500 75%, 
+    #FFC500 100%  
   );
   
   background-clip: text;

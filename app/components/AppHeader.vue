@@ -185,10 +185,8 @@
 
 <script setup>
 const { locale } = useI18n();
-import { ref, onMounted, onUnmounted } from 'vue';
 const { $gsap, $ScrollTrigger } = useNuxtApp();
 
-// 將初始值設定為 null，表示預設沒有 active 的區塊
 const activeSection = ref(null);
 const navLinks = ref(null);
 const zh = ref(null);
@@ -229,13 +227,13 @@ const scrollToSection = (sectionId) => {
 
 const handleScroll = () => {
   const sections = ['about-us', 'projects', 'partner', 'contact'];
-  let currentActive = null; // 預設沒有 active 的區塊
-  const offset = 100; // 緩衝值，讓偵測更靈敏
+  let currentActive = null; 
+  const offset = 100; 
 
-  // 檢查滾動條是否在最頂部，如果是，則不設定 active 狀態
+
   if (window.scrollY === 0) {
     activeSection.value = null;
-    return; // 結束函式
+    return;
   }
 
   for (const sectionId of sections) {
@@ -243,7 +241,6 @@ const handleScroll = () => {
     if (section) {
       const rect = section.getBoundingClientRect();
 
-      // 判斷區塊的頂部是否進入或通過視窗的頂部
       if (rect.top <= offset && rect.bottom >= offset) {
         currentActive = sectionId;
         break;
@@ -256,8 +253,7 @@ const handleScroll = () => {
 
 onMounted(() => {
   window.addEventListener('scroll', handleScroll);
-  
-  // 在元件掛載時執行一次，確保初始狀態正確
+
   handleScroll(); 
   // GSAP 動畫
   $ScrollTrigger.matchMedia({
@@ -302,14 +298,13 @@ onMounted(() => {
                 trigger: 'body',
                 start: 'top -900',
                 onEnter: () => {
-                  // 滾動超過 900px，改變所有 li 的樣式
+
                   $gsap.to(localeLinks.value.querySelectorAll('li'), {
                     color: '#242870',
                     borderColor: '#242870',
                     duration: 0.3,
                   });
-                  // 特殊處理當前選中的 li，使其背景變為白色
-                  // 找到當前選中的 li，然後添加 bg-white 類別
+
                   const currentSelected = localeLinks.value.querySelector('.bg-white');
                   if (currentSelected) {
                     $gsap.to(currentSelected, {
@@ -320,13 +315,13 @@ onMounted(() => {
                   }
                 },
                 onLeaveBack: () => {
-                  // 滾動回滾到 900px 以內，恢復預設樣式
+
                   $gsap.to(localeLinks.value.querySelectorAll('li'), {
                     color: '#ffffff',
                     borderColor: '#ffffff',
                     duration: 0.3,
                   });
-                  // 恢復當前選中的 li 的背景
+
                   const currentSelected = localeLinks.value.querySelector('.bg-white');
                   if (currentSelected) {
                     $gsap.to(currentSelected, {
@@ -340,7 +335,6 @@ onMounted(() => {
 
           }
 
-          //
     },
   })
 });
@@ -351,15 +345,10 @@ onUnmounted(() => {
 </script>
 
 <style scoped>
-/* .scrolled-active {
-  background-color: red !important;
-} */
 .nav-link {
   position: relative;
-  /* hover 效果 */
 }
 
-/* 偽元素作為漸層底線 */
 .nav-link::after {
   content: '';
   position: absolute;
@@ -378,7 +367,6 @@ onUnmounted(() => {
   transition: width 0.3s ease-in-out;
 }
 
-/* 鼠標移入或當前頁面時，底線顯示 */
 .nav-link:hover::after,
 .nav-link.active::after {
   width: 100%;
