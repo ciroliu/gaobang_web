@@ -38,7 +38,7 @@ html {
 }
 
 body {
-  background: #E6B020;
+  background: #ED0081;
   transition: background-color 0.5s ease;
 }
 
@@ -366,12 +366,12 @@ body {
 }
 
 .color-pink {
-  background: #9A1184;
+  background: #F13630;
   animation-delay: 0.5s;  
 }
 
 .color-orange {
-  background: #E33733;
+  background: #FFC500;
   animation-delay: 0.75s;    
 }
 
