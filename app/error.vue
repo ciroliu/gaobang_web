@@ -25,7 +25,7 @@
             <a 
             href="#" 
             class="border border-2 rounded-[30px] px-6 py-1 text-white font-GenJyuuGothicRegular z-50 mt-6 hover:bg-white hover:text-[#ED0081]"
-            @click.prevent="handleError">回到首頁</a>
+            @click.prevent="handleError">Back</a>
     </section>
 </template>
 
