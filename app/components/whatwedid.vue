@@ -155,10 +155,10 @@
                   </div>
 
                   <div class="flex xl:hidden flex-col justify-center items-center gap-10 px-10">
-                            <div>
+                            <div class="cursor-pointer" @click="openModal1">
                               <img src="/slider-1.webp">
                             </div>
-                            <div>
+                            <div class="cursor-pointer" @click="openModal2">
                               <img src="/slider-2.webp">
                             </div>
                             <div class="relative flex justify-center items-center bg-gradient-to-r from-[#ED0081] via-[#F13630] via-[#EE783B] to-[#FFC500] h-[400px] w-full rounded-[30px]">
