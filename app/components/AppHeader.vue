@@ -48,7 +48,7 @@
           class="nav-link"
           :class="{ active: activeSection === 'projects' }"
         >
-          Projects
+          {{ $t('projects') }}
         </a>
         <a
           href="#partner"
@@ -56,7 +56,7 @@
           class="nav-link"
           :class="{ active: activeSection === 'partner' }"
         >
-          Partner
+          {{ $t('partner') }}
         </a>
         <a
           href="#contact"
@@ -64,7 +64,7 @@
           class="nav-link"
           :class="{ active: activeSection === 'contact' }"
         >
-          Contact
+          {{ $t('contact') }}
         </a>
       </nav>
       <!-- menu -->
@@ -122,21 +122,21 @@
             @click.prevent="scrollToSection('projects'); isMobileMenuOpen = false;"
             class="nav-link"
           >
-            Projects
+            {{ $t('projects') }}
           </a>
           <a
             href="#partner"
             @click.prevent="scrollToSection('partner'); isMobileMenuOpen = false;"
             class="nav-link"
           >
-            Partner
+            {{ $t('partner') }}
           </a>
           <a
             href="#contact"
             @click.prevent="scrollToSection('contact'); isMobileMenuOpen = false;"
             class="nav-link"
           >
-            Contact
+            {{ $t('contact') }}
           </a>
         </nav>
 
