@@ -2,7 +2,7 @@
     <section 
     id="first-section"
     ref="bg_one"
-    class="w-full h-screen flex flex-col justify-center items-center">
+    class="bg-gradient-to-t from-[#ED0081] to-[#F13630] w-full h-screen flex flex-col justify-center items-center">
             <img 
             ref="logo"
             alt="高邦創意 GAOBANG"

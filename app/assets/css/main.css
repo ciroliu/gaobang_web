@@ -37,10 +37,10 @@ html {
   scroll-behavior: smooth;
 }
 
-body {
+/* body {
   background: #ED0081;
   transition: background-color 0.5s ease;
-}
+} */
 
 .logo {
     position: fixed;
@@ -380,7 +380,7 @@ body {
   0%{
     transform: scale(0.1);
     transform: translate(0,0);
-    opacity: 0;
+    opacity: 0.5;
   }
   65%{
     transform: scale(1);
