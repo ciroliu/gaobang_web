@@ -122,7 +122,7 @@
             <div class="flex-1 flex justify-start items-center">
                 <ul class="flex flex-row gap-8 justify-center items-center">
                     <li>
-                      <a href="https://www.google.com" target="_blank" rel="noopener noreferrer">
+                      <a href="/" target="_blank" rel="noopener noreferrer">
                         <img src="/gaobang.webp" alt="logo" class="w-[35px]" />
                       </a>
                     </li>
@@ -142,7 +142,7 @@
             <div class="flex justify-start items-center my-6">
                 <ul class="flex flex-row gap-8 justify-center items-center">
                     <li>
-                      <a href="https://www.google.com" target="_blank" rel="noopener noreferrer">
+                      <a href="/" target="_blank" rel="noopener noreferrer">
                         <img src="/gaobang.webp" alt="logo" class="w-[35px]" />
                       </a>
                     </li>
