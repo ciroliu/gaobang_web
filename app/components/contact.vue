@@ -14,8 +14,8 @@
                     <form 
                     @submit="submitForm" 
                     id="form">
-                        <input type="hidden" name="access_key" value="7d1516ec-0aba-45c2-9863-8edcaf171324">
-                        <input type="hidden" name="subject" value="Gaobang 高邦創意 官方網站 - 合作申請">
+                      <input type="hidden" name="access_key" value="7d1516ec-0aba-45c2-9863-8edcaf171324">
+                      <input type="hidden" name="subject" value="Gaobang 高邦創意 - 合作申請">
                     <div class="flex flex-col md:flex-row">
                     <div 
                     class="w-full md:w-1/2 px-0 sm:px-20 md:pl-16 md:pr-2 xl:px-2">
@@ -102,7 +102,7 @@
                         type="submit"
                         :disabled="isSubmitting || !isValid"
                         class="rounded-2xl px-8 py-2 text-[14px] text-white font-GenJyuuGothicRegular inline-flex justify-center items-center"
-                        :class="{'opacity-100 cursor-not-allowed': !isValid}"
+                        :class="{'cursor-not-allowed': !isValid}"
                         style="background: linear-gradient(to right, #9A1184 0%, #E33733 35%, #F4BF20 70%);">
                             {{ isSubmitting ? 'SUBMIT' : 'SUBMIT' }}
                         </button>
