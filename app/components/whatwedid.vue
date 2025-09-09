@@ -39,7 +39,8 @@
                           </div>
 
                           <div
-                            class="snap-center min-w-[95%] sm:min-w-[60%] md:min-w-[50%] xl:min-w-0 h-full flex justify-center items-center"
+                            class="snap-center min-w-[95%] sm:min-w-[60%] md:min-w-[50%] xl:min-w-0 h-full flex justify-center items-center cursor-pointer"
+                            @click="openModal2"
                           >
                             <img src="/slider-2.webp" class="h-full w-auto object-contain" />
                           </div>
@@ -151,11 +152,44 @@
     </div>
   </Transition>
 </Teleport>
+<Teleport to="body">
+  <Transition name="modal-transition">
+    <div
+      v-if="isOpen2"
+      class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-[101]"
+      @click.self="closeModal2"
+    >
+      <div 
+        class="bg-white rounded-[48px] p-6 max-w-[768px] w-full shadow-xl relative mx-10"
+      >
+        <button
+          class="absolute top-4 right-6 text-black text-2xl cursor-pointer"
+          @click="closeModal2">
+          ✕
+        </button>
 
+        <div class="mt-6 mb-4">
+          <span class="bg-[#242870] text-white text-[12px] rounded-xl px-6 py-1 font-GenJyuuGothicRegular">2019/04/27 – 2019/04/28</span>
+        </div>
+        <div class="w-full flex flex-col xl:flex-row justify-center items-start gap-6 px-2 pb-10">
+          <div class="w-full xl:w-1/3">
+            <h2 class="text-[24px] font-bold mb-10 font-GenJyuuGothicRegular">ONE PIECE SPORT</h2>
+            <p class="text-gray-700 text-[12px] mb-4 font-GenJyuuGothicRegular">ONE PIECE SPORT 活動主軸以「 運動賽事 」作為主體，並於賽事之中，導入航海王冒險劇情，使參賽者能夠享受賽事及故事的連結。</p>
+            <p class="text-gray-700 text-[12px] font-GenJyuuGothicRegular">首場於台灣屏東展開，最靠近大海的主題活動，連結「海洋」與「運動」，並與國立海洋生物博物館合作，以「全⺠皆能參與」運動會概念， 串連夏波帝諸島故事背景，結合慢跑、泡泡關卡及一百米滑⽔水道。</p>
+          </div>
+          <div class="w-full xl:w-2/3">
+            <img src="/ONE-PIECE-SPORT.webp" class="w-full">
+          </div>
+        </div>
+      </div>
+    </div>
+  </Transition>
+</Teleport>
 </template>
 
 <script setup>
 const isOpen1 = ref(false);
+const isOpen2 = ref(false);
 
 function openModal1() {
   isOpen1.value = true;
@@ -163,6 +197,14 @@ function openModal1() {
 
 function closeModal1() {
   isOpen1.value = false;
+}
+
+function openModal2() {
+  isOpen2.value = true;
+}
+
+function closeModal2() {
+  isOpen2.value = false;
 }
 
 const scroller = ref(null)
