@@ -125,7 +125,7 @@
                         </div>
                       </div>
 
-                      <a
+                      <!-- <a
                         v-show="canLeft"
                         @click="scrollLeft"
                         class="absolute left-4 top-1/2 -translate-y-1/2
@@ -151,7 +151,7 @@
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-white">
                           <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
                         </svg>
-                    </a>
+                    </a> -->
                   </div>
 
                   <div class="flex xl:hidden flex-col justify-center items-center gap-10 px-10">
@@ -276,37 +276,37 @@ function closeModal2() {
   isOpen2.value = false;
 }
 
-const scroller = ref(null)
-const canLeft = ref(false)
-const canRight = ref(false)
+// const scroller = ref(null)
+// const canLeft = ref(false)
+// const canRight = ref(false)
 
-const update = () => {
-  const el = scroller.value
-  if (!el) return
-  canLeft.value = el.scrollLeft > 0
-  canRight.value = el.scrollLeft + el.clientWidth < el.scrollWidth - 1
-}
+// const update = () => {
+//   const el = scroller.value
+//   if (!el) return
+//   canLeft.value = el.scrollLeft > 0
+//   canRight.value = el.scrollLeft + el.clientWidth < el.scrollWidth - 1
+// }
 
-const scrollLeft = () => {
-  const el = scroller.value
-  if (!el) return
-  el.scrollBy({ left: -el.clientWidth * 0.8, behavior: 'smooth' })
-}
+// const scrollLeft = () => {
+//   const el = scroller.value
+//   if (!el) return
+//   el.scrollBy({ left: -el.clientWidth * 0.8, behavior: 'smooth' })
+// }
 
-const scrollRight = () => {
-  const el = scroller.value
-  if (!el) return
-  el.scrollBy({ left: el.clientWidth * 0.8, behavior: 'smooth' })
-}
+// const scrollRight = () => {
+//   const el = scroller.value
+//   if (!el) return
+//   el.scrollBy({ left: el.clientWidth * 0.8, behavior: 'smooth' })
+// }
 
 let ro
 
 onMounted(() => {
-  update()
-  scroller.value?.addEventListener('scroll', update, { passive: true })
-  window.addEventListener('resize', update)
-  ro = new ResizeObserver(update)
-  ro.observe(scroller.value)
+  // update()
+  // scroller.value?.addEventListener('scroll', update, { passive: true })
+  // window.addEventListener('resize', update)
+  // ro = new ResizeObserver(update)
+  // ro.observe(scroller.value)
 
   $ScrollTrigger.matchMedia({
     "(min-width: 368px) and (max-width: 479px)": () => {
@@ -333,9 +333,9 @@ onMounted(() => {
 })
 
 onBeforeUnmount(() => {
-  scroller.value?.removeEventListener('scroll', update)
-  window.removeEventListener('resize', update)
-  ro?.disconnect()
+  // scroller.value?.removeEventListener('scroll', update)
+  // window.removeEventListener('resize', update)
+  // ro?.disconnect()
 })
 </script>
 
