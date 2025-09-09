@@ -127,7 +127,7 @@
                       </a>
                     </li>
                     <li>
-                      <a href="mailto:pkbaby0707@gmail.co">
+                      <a href="mailto:pkbaby0707@gmail.com">
                         <img src="/mail.webp" alt="mail" class="w-[35px]" loading="lazy" />
                       </a>
                     </li>
@@ -147,7 +147,7 @@
                       </a>
                     </li>
                     <li>
-                      <a href="mailto:pkbaby0707@gmail.co">
+                      <a href="mailto:pkbaby0707@gmail.com">
                         <img src="/mail.webp" alt="mail" class="w-[35px]" loading="lazy" />
                       </a>
                     </li>

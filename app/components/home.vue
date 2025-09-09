@@ -25,12 +25,11 @@
 
         <div
         ref="copyright"
-        class="fixed bottom-5 w-full flex flex-col justify-center items-center">
+        class="fixed bottom-5 w-full flex flex-col justify-center items-center z-10">
             <div 
             class="flex flex-col justify-center items-center">
-            <a 
-            class="text-white text-[10px] font-GenJyuuGothicRegular" 
-            href="mailto:pkbaby0707@gmail.com">Copyright © {{ currentYear }} GAO BANG CREATIVITY All Rights Reserved 2021</a>
+            <div 
+            class="text-white text-[10px] font-GenJyuuGothicRegular">Copyright © {{ currentYear }} GAO BANG CREATIVITY All Rights Reserved 2021</div>
             </div>
         </div>
     </section>
