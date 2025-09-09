@@ -3,13 +3,13 @@
     id="contact"
     class="relative bg-[#F4F5F9] w-full h-[1600px] xl:h-screen flex flex-col justify-center items-center">
         <div class="max-w-[75%] w-full flex flex-col xl:flex-row">
-            <div class="w-full xl:w-1/6">
+            <div class="w-full xl:w-1/6 absolute">
               <ul class="font-GenJyuuGothicBold tracking-[1px] sm:tracking-[1px] text-[48px] text-gradient-4-colors mb-10">
                 <li>Contact</li>
               </ul>
             </div>
 
-            <div class="w-full xl:w-full flex flex-row justify-center items-start gap-6 xl:pr-48">
+            <div class="w-full xl:w-full flex flex-row justify-center items-start gap-6">
                 <div class="w-full xl:w-[620px]">
                     <form 
                     @submit="submitForm" 
@@ -127,7 +127,7 @@
                       </a>
                     </li>
                     <li>
-                      <a href="mailto:contact@example.com">
+                      <a href="mailto:pkbaby0707@gmail.co">
                         <img src="/mail.webp" alt="mail" class="w-[35px]" />
                       </a>
                     </li>
@@ -147,7 +147,7 @@
                       </a>
                     </li>
                     <li>
-                      <a href="mailto:contact@example.com">
+                      <a href="mailto:pkbaby0707@gmail.co">
                         <img src="/mail.webp" alt="mail" class="w-[35px]" />
                       </a>
                     </li>

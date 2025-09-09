@@ -2,11 +2,11 @@
     <section 
     id="about-us"
     class="relative bg-white w-full h-full xl:h-screen flex justify-center items-center">
-      <div class="all-colors">
+      <!-- <div class="all-colors">
             <div class="color color-y absolute left-8 -bottom-[140px] w-[300px] h-[300px] blur-[100px]"></div>
             <div class="color color-o absolute right-8 -bottom-[140px] w-[300px] h-[300px] blur-[100px]"></div>
             <div class="color color-p absolute left-72 -bottom-[140px] w-[300px] h-[300px] blur-[100px]"></div>
-      </div>
+      </div> -->
 
 
         <div class="max-w-[75%] w-full z-10 pb-20">
