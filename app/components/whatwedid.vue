@@ -19,14 +19,13 @@
                 <div class="w-full xl:w-4/5 flex flex-col xl:flex-row justify-center items-center xl:pl-[13%]">
                   <!-- -->
                   <div class="hidden xl:flex relative group">
-                      <!-- 可橫向滾動的容器 -->
+
                       <div
                         ref="scroller"
                         class="relative w-full overflow-x-auto snap-x snap-mandatory hide-scrollbar scroll-smooth xl:overflow-x-visible"
                       >
                         <div class="flex flex-row gap-14 sm:gap-10 xl:gap-6 whitespace-nowrap h-[60vh] xl:h-auto items-center">
 
-                          <!-- 卡片 1 -->
                           <div
                             class="snap-center min-w-[95%] sm:min-w-[60%] md:min-w-[50%] xl:min-w-0 h-full flex justify-center items-center cursor-pointer"
                             @click="openModal1"
@@ -34,14 +33,12 @@
                             <img src="/slider-1.webp" class="h-full w-auto object-contain" />
                           </div>
 
-                          <!-- 卡片 2 -->
                           <div
                             class="snap-center min-w-[95%] sm:min-w-[60%] md:min-w-[50%] xl:min-w-0 h-full flex justify-center items-center"
                           >
                             <img src="/slider-2.webp" class="h-full w-auto object-contain" />
                           </div>
 
-                          <!-- 卡片 3 -->
                           <div
                             class="snap-center min-w-[95%] sm:min-w-[60%] md:min-w-[50%] xl:min-w-0 h-full flex justify-center items-center"
                           >
@@ -60,7 +57,6 @@
                         </div>
                       </div>
 
-                      <!-- 左側箭頭 -->
                       <a
                         v-show="canLeft"
                         @click="scrollLeft"
@@ -75,7 +71,6 @@
                         </svg>
                     </a>
 
-                      <!-- 右側箭頭 -->
                       <a
                         v-show="canRight"
                         @click="scrollRight"
