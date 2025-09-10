@@ -29,7 +29,7 @@
             <div 
             class="flex flex-col justify-center items-center">
             <div 
-            class="text-white text-[10px] font-GenJyuuGothicRegular">Copyright © {{ currentYear }} GAO BANG CREATIVITY All Rights Reserved 2021</div>
+            class="text-white text-[10px] font-GenJyuuGothicRegular">Copyright © {{ currentYear }} GAO BANG CREATIVITY All Rights Reserved</div>
             </div>
         </div>
     </section>
