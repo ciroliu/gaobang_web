@@ -1,7 +1,7 @@
 <template>
     <section 
     id="contact"
-    class="relative bg-[#F4F5F9] w-full h-[1600px] xl:h-screen flex flex-col justify-center items-center py-20">
+    class="relative bg-[#F4F5F9] w-full h-[1600px] xl:h-[800px] 2xl:h-screen flex flex-col justify-center items-center py-20">
         <div class="max-w-[75%] w-full flex flex-col xl:flex-row">
             <div class="w-full xl:w-1/6 xl:absolute">
               <ul class="font-GenJyuuGothicBold tracking-[1px] sm:tracking-[1px] text-[48px] text-gradient-4-colors mb-10">
@@ -129,7 +129,7 @@
                       </a>
                     </li>
                     <li>
-                      <a href="mailto:pkbaby0707@gmail.com">
+                      <a href="mailto:jeremy@gaobang.art">
                         <img src="/mail.webp" alt="mail" class="w-[35px]" loading="lazy" />
                       </a>
                     </li>
@@ -149,7 +149,7 @@
                       </a>
                     </li>
                     <li>
-                      <a href="mailto:pkbaby0707@gmail.com">
+                      <a href="mailto:jeremy@gaobang.art">
                         <img src="/mail.webp" alt="mail" class="w-[35px]" loading="lazy" />
                       </a>
                     </li>
