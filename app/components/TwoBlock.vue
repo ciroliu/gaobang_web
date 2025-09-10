@@ -83,7 +83,7 @@
                     </ul>
                 </div>
 
-                <div class="w-full xl:w-4/5 flex flex-col xl:flex-row justify-center items-center xl:pl-[13%]">
+                <div class="w-full xl:w-4/5 flex flex-col xl:flex-row justify-center items-center xl:pl-[7%]">
                   <!-- -->
                   <div class="hidden xl:flex relative">
 
