@@ -119,7 +119,7 @@
           <p class="hidden xl:flex text-[12px] text-[#606060] tracking-[2px] text-center font-GenJyuuGothicRegular">Make dreams come true, make everything happen.</p>
           <p class="flex xl:hidden text-center text-[12px] text-[#606060] tracking-[2px] text-center font-GenJyuuGothicRegular">Make dreams come true, make <br>everything happen.</p>
         </div>
-    <footer class="w-full absolute bottom-0 h-[60px] bg-[#242870] hidden xl:flex">
+    <footer class="w-full absolute bottom-0 h-[60px] bg-[#242870] hidden xl:flex z-20">
         <div class="flex justify-between items-center h-full px-10 text-white w-full">
             <div class="flex-1 flex justify-start items-center">
                 <ul class="flex flex-row gap-8 justify-center items-center">
@@ -136,10 +136,10 @@
                 </ul>
             </div>
             <div class="flex-1 text-[12px] text-center tracking-[1.5px] font-GenJyuuGothicRegular">台北辦公室：台北市大同區市民大道一段209號12樓</div>
-            <div class="flex-1 text-[10px] text-center tracking-[1.5px] font-GenJyuuGothicRegular">Copyright © 2025 GAO BANG CREATIVITY All Rights Reserved 2021</div>
+            <div class="flex-1 text-[10px] text-center tracking-[1.5px] font-GenJyuuGothicRegular">Copyright © 2025 GAO BANG CREATIVITY All Rights Reserved</div>
         </div>
     </footer>
-    <footer class="flex xl:hidden w-full absolute bottom-0 h-[240px] bg-[#242870] flex justify-center">
+    <footer class="flex xl:hidden w-full absolute bottom-0 h-[240px] bg-[#242870] flex justify-center z-20">
         <div class="flex flex-col justify-center items-center h-full px-10 text-white">
             <div class="flex justify-start items-center my-6">
                 <ul class="flex flex-row gap-8 justify-center items-center">
@@ -157,7 +157,7 @@
             </div>
             <div class="text-[10px] text-center tracking-[1.25px] font-GenJyuuGothicRegular">台北辦公室：台北市大同區市民大道一段209號12樓</div>
             <hr class="bg-white h-[1px] w-full my-6">
-            <div class="text-[10px] text-center tracking-[1.25px] font-GenJyuuGothicRegular">Copyright © 2025 GAO BANG CREATIVITY All Rights Reserved 2021</div>
+            <div class="text-[10px] text-center tracking-[1.25px] font-GenJyuuGothicRegular">Copyright © 2025 GAO BANG CREATIVITY All Rights Reserved</div>
         </div>
     </footer>
     </section>

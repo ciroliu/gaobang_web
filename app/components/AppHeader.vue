@@ -3,7 +3,7 @@
     <div class="relative flex justify-between items-center py-5 pl-10 pr-32">
       <ul
       ref="localeLinks"
-      class="hidden xl:flex flex-row gap-[1.5px] text-white font-GenJyuuGothicBold">
+      class="hidden xl:flex flex-row gap-[1.5px] text-white font-GenJyuuGothicBold opacity-0">
         <li
           ref="tw"
           @click.prevent="$i18n.setLocale('zh-tw')"
@@ -141,7 +141,7 @@
         </nav>
 
         <ul
-        class="flex flex-row gap-[1.5px] font-GenJyuuGothicBold px-10 pb-10">
+        class="flex flex-row gap-[1.5px] font-GenJyuuGothicBold px-10 pb-10 opacity-0">
           <li
             ref="tw"
             @click.prevent="$i18n.setLocale('zh-tw')"

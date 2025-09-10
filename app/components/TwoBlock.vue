@@ -20,12 +20,12 @@
             class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 justify-items-center gap-10">
             <div class="w-[250px] h-[250px] rounded-full bg-custom-purple flex justify-center items-center text-white text-center">
                 <ul>
-                <li>IP多元企劃</li>
-                <li class="text-[32px] font-bold mt-4">IP企劃活動</li>
+                <li>IP統籌合作</li>
+                <li class="text-[32px] font-bold mt-4">聯名企劃</li>
                 <li class="flex justify-center items-center">
                     <hr class="w-[100px] h-[1px] bg-white mb-4">
                 </li>
-                <li class="text-[12px]">政府單位活動、</li>
+                <li class="text-[12px]">政府大型活動</li>
                 <li class="text-[12px]">品牌聯名等</li>
                 </ul>
             </div>
@@ -36,29 +36,30 @@
                 <li class="flex justify-center items-center">
                     <hr class="w-[100px] h-[1px] bg-white mb-4">
                 </li>
-                <li class="text-[12px]">企劃執行顧問，</li>
-                <li class="text-[12px]">協助品牌方案</li>
+                <li class="text-[12px]">企劃執行顧問</li>
+                <li class="text-[12px]">品牌方案建置</li>
                 </ul>
             </div>
             <div class="w-[250px] h-[250px] rounded-full bg-custom-orange flex justify-center items-center text-white text-center">
                 <ul>
-                <li>行銷活動策畫</li>
+                <li>IP行銷統籌</li>
                 <li class="text-[32px] font-bold mt-4">行銷策畫</li>
                 <li class="flex justify-center items-center">
                     <hr class="w-[100px] h-[1px] bg-white mb-4">
                 </li>
-                <li class="text-[12px]">線上下IP行銷操作及執行</li>
+                <li class="text-[12px]">線上&線下行銷</li>
+                <li class="text-[12px]">公關及社群操作</li>
                 </ul>
             </div>
             <div class="w-[250px] h-[250px] rounded-full bg-custom-yellow flex justify-center items-center text-white text-center">
                 <ul>
-                <li>周商/FRP</li>
-                <li class="text-[32px] font-bold mt-4">周邊商品</li>
+                <li>IP周邊商品</li>
+                <li class="text-[32px] font-bold mt-4">開發製作</li>
                 <li class="flex justify-center items-center">
                     <hr class="w-[100px] h-[1px] bg-white mb-4">
                 </li>
-                <li class="text-[12px]">IP周邊商品開發、</li>
-                <li class="text-[12px]">製作販售等</li>
+                <li class="text-[12px]">周邊商品販售</li>
+                <li class="text-[12px]">開發設計及製作</li>
                 </ul>
             </div>
             </div>
@@ -78,8 +79,8 @@
                 <div class="w-full xl:w-1/5 ml-[13%]">
                     <ul class="px-0 xl:px-10 mb-10">
                         <li class="mb-6 text-[32px] font-bold text-[#606060] tracking-[1.5px] font-GenJyuuGothicRegular whitespace-nowrap">過往精選案例</li>
-                        <li class="hidden xl:flex text-[14px] text-[#606060] tracking-[1.5px] font-GenJyuuGothicRegular">高邦創意擁有豐富的展覽策劃經驗，從企劃撰寫到活動落地，我們已成功主辦多場大型動漫IP 展覽。</li>
-                        <li class="flex xl:hidden text-[14px] text-[#606060] tracking-[1.5px] font-GenJyuuGothicRegular">高邦創意擁有豐富的展覽策劃經驗，<br>從企劃撰寫到活動落地，我們已成功<br>主辦多場大型動漫IP 展覽。</li>
+                        <li class="hidden xl:flex text-[14px] text-[#606060] tracking-[1.5px] font-GenJyuuGothicRegular">高邦創意擁有豐富的展覽策劃經驗，從企劃撰寫到活動落地，我們已成功主辦多場大型動漫IP展覽及協助政府大型活動。</li>
+                        <li class="flex xl:hidden text-[14px] text-[#606060] tracking-[1.5px] font-GenJyuuGothicRegular">高邦創意擁有豐富的展覽策劃經驗，<br>從企劃撰寫到活動落地，我們已成功<br>主辦多場大型動漫IP展覽及協助政府大型活動。</li>
                     </ul>
                 </div>
 
