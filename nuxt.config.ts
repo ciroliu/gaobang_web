@@ -45,7 +45,9 @@ export default defineNuxtConfig({
         name: '日本語'
       }
     ],
-    defaultLocale: 'zh-tw'
+    defaultLocale: 'zh-tw',
+    detectBrowserLanguage: false,
+    strategy: 'prefix_except_default',
   },
   gsap: {
     extraPlugins: {
