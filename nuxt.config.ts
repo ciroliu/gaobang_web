@@ -20,7 +20,8 @@ export default defineNuxtConfig({
     '@nuxtjs/tailwindcss',
     '@hypernym/nuxt-gsap',
     '@nuxtjs/i18n',
-    'nuxt-schema-org'
+    'nuxt-schema-org',
+    '@nuxtjs/sitemap'
   ],
   i18n: {
     langDir: 'locales',
@@ -51,6 +52,22 @@ export default defineNuxtConfig({
       scrollTrigger: true
     },
     provide: true
+  },
+  site: { 
+  url: 'https://gaobang.art', 
+  name: '高邦創意 GAOBANG' 
+  }, 
+  sitemap: {
+    
+    hostname: 'https://gaobang.art', // 改成你的網域
+    i18n: true, // 啟用 sitemap 多語系支援
+    sitemaps: false
+    // 如果需要手動指定
+    // urls: [
+    //   { loc: '/', lang: 'zh' },
+    //   { loc: '/en', lang: 'en' },
+    //   { loc: '/ja', lang: 'ja' }
+    // ]
   },
   schemaOrg: {
     identity: defineOrganization({
