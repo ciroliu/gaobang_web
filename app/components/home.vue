@@ -86,6 +86,7 @@ onMounted(() => {
             targets: logotxt.value
           },
         },
+        opacity: 1,
         scale: 1,
       })
       // copyright 淡出效果
