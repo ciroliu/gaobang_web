@@ -208,7 +208,14 @@
             <p class="text-gray-700 text-[12px] font-GenJyuuGothicRegular">首次結合「五感體驗」，以知覺、視覺、聽覺、觸覺及味覺做完美結合，首度展場加入輕食區，超越以往展覽規模，24隻大型公仔現身，其中更有 Big Mom 425公分高讓粉絲驚嘆不已，更為台灣首次曝光 ！展期導入 AR 互動及電子集章活動，讓粉絲能夠在回味劇情，還能留下紀念。</p>
           </div>
           <div class="w-full xl:w-2/3">
-            <img src="/whatdid.webp" class="w-full" loading="lazy">
+              <div v-if="!isImageLoaded1" class="skeleton-loader"></div>
+              <img 
+                :class="{ 'image-hidden': !isImageLoaded1, 'image-visible': isImageLoaded1 }"
+                src="/whatdid.webp" 
+                class="w-full" 
+                @load="isImageLoaded1 = true" 
+                loading="lazy"
+              />
           </div>
         </div>
       </div>
@@ -241,7 +248,14 @@
             <p class="text-gray-700 text-[12px] font-GenJyuuGothicRegular">首場於台灣屏東展開，最靠近大海的主題活動，連結「海洋」與「運動」，並與國立海洋生物博物館合作，以「全⺠皆能參與」運動會概念， 串連夏波帝諸島故事背景，結合慢跑、泡泡關卡及一百米滑⽔水道。</p>
           </div>
           <div class="w-full xl:w-2/3">
-            <img src="/ONE-PIECE-SPORT.webp" class="w-full" loading="lazy">
+              <div v-if="!isImageLoaded2" class="skeleton-loader"></div>
+              <img 
+                :class="{ 'image-hidden': !isImageLoaded2, 'image-visible': isImageLoaded2 }"
+                src="/ONE-PIECE-SPORT.webp" 
+                class="w-full" 
+                @load="isImageLoaded2 = true" 
+                loading="lazy"
+              />
           </div>
         </div>
       </div>
@@ -257,6 +271,8 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 const { $gsap, $ScrollTrigger } = useNuxtApp();
 
+const isImageLoaded1 = ref(false);
+const isImageLoaded2 = ref(false);
 const container = ref(null);
 const isOpen1 = ref(false);
 const isOpen2 = ref(false);
@@ -300,7 +316,7 @@ function closeModal2() {
 //   el.scrollBy({ left: el.clientWidth * 0.8, behavior: 'smooth' })
 // }
 
-let ro
+// let ro
 
 onMounted(() => {
   // update()
@@ -333,14 +349,44 @@ onMounted(() => {
   })
 })
 
-onBeforeUnmount(() => {
-  // scroller.value?.removeEventListener('scroll', update)
-  // window.removeEventListener('resize', update)
-  // ro?.disconnect()
-})
+// onBeforeUnmount(() => {
+//   scroller.value?.removeEventListener('scroll', update)
+//   window.removeEventListener('resize', update)
+//   ro?.disconnect()
+// })
+const isImageLoaded = ref(false);
 </script>
 
 <style scoped>
+.image-container {
+  position: relative;
+}
+
+.skeleton-loader {
+  background-color: #e2e2e2;
+  border-radius: 8px;
+  animation: pulse 1.5s infinite ease-in-out;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@keyframes pulse {
+  0% { opacity: 0.6; }
+  50% { opacity: 1; }
+  100% { opacity: 0.6; }
+}
+
+.image-hidden {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.image-visible {
+  opacity: 1;
+}
 /* 隱藏卷軸 */
 .hide-scrollbar {
   scrollbar-width: none; /* Firefox */
