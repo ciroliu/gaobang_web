@@ -60,7 +60,7 @@ onMounted(() => {
           start: "top -80",
           end: "7300px",
           toggleClass: {
-            className: 'logo-to',
+            className: 'mb-logo-to',
             targets: logo.value
           },
         },
@@ -88,17 +88,17 @@ onMounted(() => {
         },
         scale: 1,
       })
-      //
+      // copyright 淡出效果
       $gsap.to(copyright.value, {
-            scrollTrigger: {
-              trigger: bg_one.value,   // 用 bg_one 當觸發點
-              start: "bottom bottom",  // 當 bg_one 的底部碰到畫面底部
-              end: "bottom top",       // 當 bg_one 的底部完全離開畫面
-              toggleActions: "play none none reverse",
-            },
-            opacity: 0,
-            y: -0,
-            duration: 0.5,
+        scrollTrigger: {
+          trigger: bg_one.value,   // 用 bg_one 當觸發點
+          start: "bottom bottom",  // 當 bg_one 的底部碰到畫面底部
+          end: "bottom top",       // 當 bg_one 的底部完全離開畫面
+          toggleActions: "play none none reverse",
+        },
+        opacity: 0,
+        y: -0,
+        duration: 0.5,
       })
     },
     "(min-width: 480px)": () => {

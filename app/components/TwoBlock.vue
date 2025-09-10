@@ -85,11 +85,11 @@
 
                 <div class="w-full xl:w-4/5 flex flex-col xl:flex-row justify-center items-center xl:pl-[13%]">
                   <!-- -->
-                  <div class="hidden xl:flex relative group">
+                  <div class="hidden xl:flex relative">
 
                       <div
                         ref="scroller"
-                        class="relative w-full overflow-x-auto snap-x snap-mandatory hide-scrollbar scroll-smooth xl:overflow-x-visible"
+                        class="relative w-full"
                       >
                         <div class="flex flex-row gap-14 sm:gap-10 xl:gap-6 whitespace-nowrap h-[60vh] xl:h-auto items-center">
 

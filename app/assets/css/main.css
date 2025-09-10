@@ -131,6 +131,14 @@ html {
         top: 8%;
         right: 2rem;
     }
+    .mb-logo-to {
+        position: fixed;
+        margin-right:0px;
+        margin-top:0px;
+        width: 60px;
+        top: 6%;
+        left: 2rem;
+    }
 }
 
 .nall-colors {
