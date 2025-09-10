@@ -74,10 +74,10 @@
                 <li>What We Did</li>
             </ul>
             
-            <div class="w-full flex flex-col 2xl:flex-row justify-center items-start mb-20">
+            <div class="w-full flex flex-col xl:flex-row justify-center items-start mb-20">
                 <div class="w-full xl:w-1/5 ml-[13%]">
                     <ul class="px-0 xl:px-10 mb-10">
-                        <li class="mb-6 text-[32px] font-bold text-[#606060] tracking-[1.5px] font-GenJyuuGothicRegular">過往精選案例</li>
+                        <li class="mb-6 text-[32px] font-bold text-[#606060] tracking-[1.5px] font-GenJyuuGothicRegular whitespace-nowrap">過往精選案例</li>
                         <li class="hidden xl:flex text-[14px] text-[#606060] tracking-[1.5px] font-GenJyuuGothicRegular">高邦創意擁有豐富的展覽策劃經驗，從企劃撰寫到活動落地，我們已成功主辦多場大型動漫IP 展覽。</li>
                         <li class="flex xl:hidden text-[14px] text-[#606060] tracking-[1.5px] font-GenJyuuGothicRegular">高邦創意擁有豐富的展覽策劃經驗，<br>從企劃撰寫到活動落地，我們已成功<br>主辦多場大型動漫IP 展覽。</li>
                     </ul>
@@ -112,11 +112,11 @@
                           >
                             <div class="relative flex justify-center items-center h-full w-full pr-20 sm:pr-0">
                               <img src="/slider-3.webp" class="h-full w-auto object-contain" loading="lazy"/>
-                              <ul class="absolute text-left px-8">
+                              <ul class="absolute text-center 3xl:text-left px-8">
                                 <li class="text-white tracking-[1.5px] text-[24px] font-GenJyuuGothicBold">
                                   MORE …
                                 </li>
-                                <li class="mt-6 text-white text-[12px] tracking-[1.5px] font-GenJyuuGothicRegular">
+                                <li class="mt-6 text-white text-[10px] 3xl:text-[12px] tracking-[1.5px] font-GenJyuuGothicRegular">
                                   因保密協議無法公開，協助<br />多項國際IP推動大型/政府活動
                                 </li>
                               </ul>

@@ -1,7 +1,7 @@
 <template>
     <section 
     id="contact"
-    class="relative bg-[#F4F5F9] w-full h-[1600px] xl:h-screen flex flex-col justify-center items-center">
+    class="relative bg-[#F4F5F9] w-full h-[1600px] xl:h-screen flex flex-col justify-center items-center py-20">
         <div class="max-w-[75%] w-full flex flex-col xl:flex-row">
             <div class="w-full xl:w-1/6 xl:absolute">
               <ul class="font-GenJyuuGothicBold tracking-[1px] sm:tracking-[1px] text-[48px] text-gradient-4-colors mb-10">
@@ -136,7 +136,7 @@
                 </ul>
             </div>
             <div class="flex-1 text-[12px] text-center tracking-[1.5px] font-GenJyuuGothicRegular">台北辦公室：台北市大同區市民大道一段209號12樓</div>
-            <div class="flex-1 text-[12px] text-center tracking-[1.5px] font-GenJyuuGothicRegular">Copyright © 2025 GAO BANG CREATIVITY All Rights Reserved 2021</div>
+            <div class="flex-1 text-[10px] text-center tracking-[1.5px] font-GenJyuuGothicRegular">Copyright © 2025 GAO BANG CREATIVITY All Rights Reserved 2021</div>
         </div>
     </footer>
     <footer class="flex xl:hidden w-full absolute bottom-0 h-[240px] bg-[#242870] flex justify-center">
