@@ -21,8 +21,7 @@ export default defineNuxtConfig({
     '@hypernym/nuxt-gsap',
     '@nuxtjs/i18n',
     'nuxt-schema-org',
-    '@nuxtjs/sitemap',
-    '@nuxtjs/strapi'
+    '@nuxtjs/sitemap'
   ],
   i18n: {
     langDir: 'locales',
