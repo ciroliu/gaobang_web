@@ -6,9 +6,9 @@ const { locale } = useI18n()
 useSeoMeta({
   title: () =>
     locale.value === 'ja'
-      ? '高邦クリエイティブ GAOBANG'
+      ? '高邦クリエイティブ'
       : locale.value === 'en'
-        ? 'Gaobang Creative GAOBANG'
+        ? 'Gaobang Creative'
         : '高邦創意 GAOBANG',
 
   description: () =>
@@ -20,9 +20,9 @@ useSeoMeta({
 
   ogTitle: () =>
     locale.value === 'ja'
-      ? '高邦クリエイティブ GAOBANG'
+      ? '高邦クリエイティブ'
       : locale.value === 'en'
-        ? 'Gaobang Creative GAOBANG'
+        ? 'Gaobang Creative'
         : '高邦創意 GAOBANG',
 
   ogDescription: () =>
