@@ -48,6 +48,7 @@ export default defineNuxtConfig({
     defaultLocale: 'zh-tw',
     detectBrowserLanguage: false,
     strategy: 'prefix_except_default',
+    seo: true
   },
   gsap: {
     extraPlugins: {
