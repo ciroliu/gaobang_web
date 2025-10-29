@@ -50,6 +50,7 @@ onMounted(() => {
   const copy = copyright.value
   const bg = bg_one.value
 
+
   if (!img || !txt || !copy || !bg) return
 
   const startGsap = () => {

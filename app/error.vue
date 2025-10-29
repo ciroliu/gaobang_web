@@ -13,6 +13,9 @@
               src="/logo.png" 
               alt="logo">
             </div>
+            <img src="/404.svg"
+            class="w-[256px]" 
+            alt="page not found">
             <h5 
             style="rotate: 5deg;"
             class="text-white font-GenJyuuGothicBold tracking-[1px] text-[128px] z-50">404</h5>
