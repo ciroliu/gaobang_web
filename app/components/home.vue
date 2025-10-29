@@ -13,8 +13,7 @@
             ref="logo"
             alt="高邦創意 GAOBANG"
             src="/logo.png" 
-            class="logo z-40"
-            loading="lazy">
+            class="logo z-40">
             <h5 
             ref="logotxt"
             class="fixed flex justify-center items-center mt-[12rem] sm:mt-60 text-[1.5rem] sm:text-2xl md:text-[1.7rem] md:leading-10 text-white font-GenJyuuGothicBold tracking-[1px] sm:tracking-[1px] z-[101]" 
@@ -36,6 +35,7 @@
 </template>
 
 <script setup lang="ts">
+
 const currentYear = computed(() => new Date().getFullYear());
 const logo = ref<HTMLElement | null>(null);
 const logotxt = ref<HTMLElement | null>(null);
@@ -45,116 +45,95 @@ const bg_one = ref<HTMLElement | null>(null);
 const { $gsap, $ScrollTrigger } = useNuxtApp();
 
 onMounted(() => {
-  $ScrollTrigger.matchMedia({
-    "(min-width: 368px) and (max-width: 479px)": () => {
-      // logo 動畫
-      $gsap.from(logo.value, {
-        y: 500,
-        opacity: 0,
-        scale: 0,
-        duration: 0.75,
-      })
-      $gsap.to(logo.value, {
-        scrollTrigger: {
-          trigger: '#first-section',
-          start: "top -80",
-          end: "7300px",
-          toggleClass: {
-            className: 'mb-logo-to',
-            targets: logo.value
-          },
-        },
-        opacity: 1,
-        scale: 1
-      })
+  const img = logo.value as HTMLImageElement
+  const txt = logotxt.value
+  const copy = copyright.value
+  const bg = bg_one.value
 
-      // logotxt 動畫
-      $gsap.from(logotxt.value, {
-        y: 500,
-        opacity: 0,
-        scale: 0,
-        delay: 1,
-        duration: 0.5,
-      })
-      $gsap.to(logotxt.value, {
-        scrollTrigger: {
-          trigger: '#first-section',
-          start: "top -10",
-          end: "7300px",
-          toggleClass: {
-            className: 'logotxt-to',
-            targets: logotxt.value
-          },
-        },
-        opacity: 1,
-        scale: 1,
-      })
-      // copyright 淡出效果
-      $gsap.to(copyright.value, {
-        scrollTrigger: {
-          trigger: bg_one.value,   // 用 bg_one 當觸發點
-          start: "bottom bottom",  // 當 bg_one 的底部碰到畫面底部
-          end: "bottom top",       // 當 bg_one 的底部完全離開畫面
-          toggleActions: "play none none reverse",
-        },
-        opacity: 0,
-        y: -0,
-        duration: 0.5,
-      })
-    },
-    "(min-width: 480px)": () => {
-          //
-        $gsap.from(logo.value, {
-            y: 2000,
-            opacity: 0,
-            scale: 0,
-            duration: 0.75,
-        });
-          $gsap.to(logo.value, {
-           scrollTrigger: {
-            start: "top -80",
-            end: "bottom top", 
-            toggleClass: {
-              className: 'logo-to', 
-              targets: logo.value
-            },
-           },
-           opacity: 1,
-           scale: 1
-          });
-          //
-          $gsap.from(logotxt.value, {
-            y: 2000,
-            opacity: 0,
-            scale: 0,
-            delay: 1,
-            duration: 0.5,
-          });
-          $gsap.to(logotxt.value, {
-           scrollTrigger: {
-            start: "top -10",
-            end: "bottom top",
-            toggleClass: {
-              className: 'logotxt-to', 
-              targets: logotxt.value
-            },
+  if (!img || !txt || !copy || !bg) return
 
-           },
-           scale: 1,
-          });
-          // copyright 淡出效果
-          $gsap.to(copyright.value, {
-            scrollTrigger: {
-              trigger: bg_one.value,   // 用 bg_one 當觸發點
-              start: "bottom bottom",  // 當 bg_one 的底部碰到畫面底部
-              end: "bottom top",       // 當 bg_one 的底部完全離開畫面
-              toggleActions: "play none none reverse",
-            },
-            opacity: 0,
-            y: -0,
-            duration: 0.5,
-          })
-    },
-  })
+  const startGsap = () => {
+    $ScrollTrigger.matchMedia({
+      "(min-width: 368px) and (max-width: 479px)": () => {
+        $gsap.from(img, { y: 500, opacity: 0, scale: 0, duration: 0.75 })
+        $gsap.to(img, {
+          scrollTrigger: {
+            trigger: '#first-section',
+            start: 'top -80',
+            end: '7300px',
+            toggleClass: { className: 'mb-logo-to', targets: img }
+          },
+          opacity: 1,
+          scale: 1
+        })
+
+        $gsap.from(txt, { y: 500, opacity: 0, scale: 0, delay: 1, duration: 0.5 })
+        $gsap.to(txt, {
+          scrollTrigger: {
+            trigger: '#first-section',
+            start: 'top -10',
+            end: '7300px',
+            toggleClass: { className: 'logotxt-to', targets: txt }
+          },
+          opacity: 1,
+          scale: 1
+        })
+
+        $gsap.to(copy, {
+          scrollTrigger: {
+            trigger: bg,
+            start: 'bottom bottom',
+            end: 'bottom top',
+            toggleActions: 'play none none reverse'
+          },
+          opacity: 0,
+          y: -0,
+          duration: 0.5
+        })
+      },
+
+      '(min-width: 480px)': () => {
+        $gsap.from(img, { y: 2000, opacity: 0, scale: 0, duration: 0.75 })
+        $gsap.to(img, {
+          scrollTrigger: {
+            start: 'top -80',
+            end: 'bottom top',
+            toggleClass: { className: 'logo-to', targets: img }
+          },
+          opacity: 1,
+          scale: 1
+        })
+
+        $gsap.from(txt, { y: 2000, opacity: 0, scale: 0, delay: 1, duration: 0.5 })
+        $gsap.to(txt, {
+          scrollTrigger: {
+            start: 'top -10',
+            end: 'bottom top',
+            toggleClass: { className: 'logotxt-to', targets: txt }
+          },
+          scale: 1
+        })
+
+        $gsap.to(copy, {
+          scrollTrigger: {
+            trigger: bg,
+            start: 'bottom bottom',
+            end: 'bottom top',
+            toggleActions: 'play none none reverse'
+          },
+          opacity: 0,
+          y: -0,
+          duration: 0.5
+        })
+      }
+    })
+  }
+
+  // 等待圖片載入完成才執行動畫
+  if (img.complete) {
+    startGsap()
+  } else {
+    img.addEventListener('load', startGsap)
+  }
 })
 </script>
