@@ -197,7 +197,7 @@
       isSubmitting.value = true;
       //
       const submitData = {
-        access_key: '9220bf48-6e83-4f37-8cf9-ad5d0ab81f8f',
+        access_key: '7d1516ec-0aba-45c2-9863-8edcaf171324',
         subject: 'Gaobang 高邦創意 官方網站 - 合作申請',
         姓名: form.name,
         公司名稱: form.company,
