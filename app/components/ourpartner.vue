@@ -1,20 +1,32 @@
 <template>
     <section 
     id="partner"
-    class="relative bg-white w-full h-screen flex justify-center items-center">
+    class="relative bg-white w-full h-full xl:h-screen flex justify-center items-center mb-24 sm:mb-0">
         <div class="max-w-[75%] w-full flex flex-col xl:flex-row justify-center items-start">
             <ul class="w-full sm:w-1/2 font-GenJyuuGothicBold tracking-[1px] sm:tracking-[1px] text-[48px] text-gradient-4-colors mb-10">
                 <li>Our Partner</li>
             </ul>
             
-            <div class="relative w-full xl:w-1/2 flex flex-row justify-center items-center">
-                <!-- -->
+            <div class="relative w-full xl:w-1/2 flex flex-col sm:flex-row justify-center items-center gap-8">
+                <!-- 1 -->
                 <div class="relative w-[360px] h-[420px] bg-[#F7F7F7] px-10 py-20 rounded-[40px] z-[21]">
                     <h2><img src="/LOXARC.webp" class="w-[240px] mx-auto" loading="lazy"></h2>
                     <p class="text-[#606060] text-[14px] tracking-[1.5px] font-GenJyuuGothicRegular pt-20">ソーシャルゲームアプリの企画・開発・運営、UI・UXデザインコンサルティング、WEBサービスをはじめとしたインターネットに備わるサービスを展開、支援しています。</p>
 
                     <div class="absolute bottom-5 right-5">
                         <a href="https://loxarc.co.jp/" rel="noopener noreferrer" target="_blank">
+                            <img src="/web.webp" class="w-[36px]" loading="lazy">
+                        </a>
+                    </div>
+                </div>
+                <!-- 2 -->
+                <div class="relative w-[360px] h-[420px] bg-[#F7F7F7] px-10 py-20 rounded-[40px] z-[21]">
+                    <h2><img src="/ARC.webp" class="w-[240px] mx-auto" loading="lazy"></h2>
+                    <p class="text-[#606060] text-[14px] tracking-[1.5px] font-GenJyuuGothicRegular pt-20">Arc Nova株式会社は、日本と海外を結ぶIPプロデュース企業です。アニメ・キャラクター・ゲームなどの知的財産を中心に、ライセンス、イベント、デザイン、マーケティングを統合的に展開します。
+</p>
+
+                    <div class="absolute bottom-5 right-5">
+                        <a href="https://arc-nova.jp/" rel="noopener noreferrer" target="_blank">
                             <img src="/web.webp" class="w-[36px]" loading="lazy">
                         </a>
                     </div>

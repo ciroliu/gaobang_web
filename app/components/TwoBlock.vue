@@ -72,14 +72,14 @@
 
         <div class="w-full flex flex-col justify-center items-start z-10">
             <ul class="w-full font-GenJyuuGothicBold tracking-[1px] sm:tracking-[1px] text-[48px] text-gradient-4-colors mt-40 xl:mt-20 mb-10 ml-[13%]">
-                <li>What We Did</li>
+                <li>What We Do</li>
             </ul>
             
             <div class="w-full flex flex-col xl:flex-row justify-center items-start mb-20">
                 <div class="w-full xl:w-1/5 ml-[13%]">
                     <ul class="px-0 xl:px-10 mb-10">
-                        <li class="mb-6 text-[32px] font-bold text-[#606060] tracking-[1.5px] font-GenJyuuGothicRegular whitespace-nowrap">過往精選案例</li>
-                        <li class="hidden xl:flex text-[14px] text-[#606060] tracking-[1.5px] font-GenJyuuGothicRegular">高邦創意擁有豐富的展覽策劃經驗，從企劃撰寫到活動落地，我們已成功主辦多場大型動漫IP展覽及協助政府大型活動。</li>
+                        <li class="mb-6 text-[32px] font-bold text-[#606060] tracking-[1.5px] font-GenJyuuGothicRegular whitespace-nowrap">精選案例</li>
+                        <li class="hidden xl:flex text-[14px] text-[#606060] tracking-[1.5px] font-GenJyuuGothicRegular">高邦創意擁有豐富的展覽策劃經驗，從企劃撰寫到活動落地，我們已成功主辦多場大型動漫IP展覽及協助政府大型活動。包含許多知名國際IP，<br><br>包含Dragon Ball、ONE PIECE等，更積極攜台灣IP發展至海外。</li>
                         <li class="flex xl:hidden text-[14px] text-[#606060] tracking-[1.5px] font-GenJyuuGothicRegular">高邦創意擁有豐富的展覽策劃經驗，<br>從企劃撰寫到活動落地，我們已成功<br>主辦多場大型動漫IP展覽及協助政府大型活動。</li>
                     </ul>
                 </div>
@@ -92,28 +92,22 @@
                         ref="scroller"
                         class="relative w-full"
                       >
-                        <div class="flex flex-row gap-14 sm:gap-10 xl:gap-6 whitespace-nowrap h-[60vh] xl:h-auto items-center">
-
-                          <div
-                            class="snap-center min-w-[95%] sm:min-w-[60%] md:min-w-[50%] xl:min-w-0 h-full flex justify-center items-center cursor-pointer"
-                            @click="openModal1"
-                          >
-                            <img src="/slider-1.webp" class="h-full w-auto object-contain" loading="lazy" />
+                      <div class="flex flex-row gap-14 sm:gap-10 xl:gap-6 whitespace-nowrap items-center">
+                          <!-- Slide 1 -->
+                          <div class="snap-center min-w-[95%] sm:min-w-[60%] md:min-w-[50%] xl:min-w-0 h-[360px] flex justify-center items-center">
+                            <img src="/slider-5.webp" class="h-full w-auto object-contain" loading="lazy" />
                           </div>
 
-                          <div
-                            class="snap-center min-w-[95%] sm:min-w-[60%] md:min-w-[50%] xl:min-w-0 h-full flex justify-center items-center cursor-pointer"
-                            @click="openModal2"
-                          >
-                            <img src="/slider-2.webp" class="h-full w-auto object-contain" loading="lazy" />
+                          <!-- Slide 2 -->
+                          <div class="snap-center min-w-[95%] sm:min-w-[60%] md:min-w-[50%] xl:min-w-0 h-[360px] flex justify-center items-center">
+                            <img src="/slider-6.webp" class="h-full w-auto object-contain" loading="lazy" />
                           </div>
 
-                          <div
-                            class="snap-center min-w-[95%] sm:min-w-[60%] md:min-w-[50%] xl:min-w-0 h-full flex justify-center items-center"
-                          >
-                            <div class="relative flex justify-center items-center h-full w-full pr-20 sm:pr-0">
-                              <img src="/slider-3.webp" class="h-full w-auto object-contain" loading="lazy"/>
-                              <ul class="absolute text-center 3xl:text-left px-8">
+                          <!-- Slide 3 (with text overlay) -->
+                          <div class="snap-center min-w-[95%] sm:min-w-[60%] md:min-w-[50%] xl:min-w-0 h-[360px] flex justify-center items-center">
+                            <div class="relative h-full flex justify-center items-center">
+                              <img src="/slider-3.webp" class="h-full w-auto object-contain" loading="lazy" />
+                              <ul class="absolute inset-0 flex flex-col justify-center items-center text-center px-8">
                                 <li class="text-white tracking-[1.5px] text-[24px] font-GenJyuuGothicBold">
                                   MORE …
                                 </li>
@@ -156,11 +150,11 @@
                   </div>
 
                   <div class="flex xl:hidden flex-col justify-center items-center gap-10 px-10">
-                            <div class="cursor-pointer" @click="openModal1">
-                              <img src="/slider-1.webp" loading="lazy">
+                            <div class="">
+                              <img src="/slider-5.webp" loading="lazy">
                             </div>
-                            <div class="cursor-pointer" @click="openModal2">
-                              <img src="/slider-2.webp" loading="lazy">
+                            <div class="">
+                              <img src="/slider-6.webp" loading="lazy">
                             </div>
                             <div class="relative flex justify-center items-center bg-gradient-to-r from-[#ED0081] via-[#F13630] via-[#EE783B] to-[#FFC500] h-[400px] max-w-[440px] w-full rounded-[30px]">
                               <ul class="absolute text-left px-8">
