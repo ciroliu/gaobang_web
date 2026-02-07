@@ -22,7 +22,7 @@
                 <!-- 2 -->
                 <div class="relative w-[360px] h-[420px] bg-[#F7F7F7] px-10 py-20 rounded-[40px] z-[21]">
                     <h2><img src="/ARC.webp" class="w-[240px] mx-auto" loading="lazy"></h2>
-                    <p class="text-[#606060] text-[14px] tracking-[1.5px] font-GenJyuuGothicRegular pt-20">Arc Nova株式会社は、日本と海外を結ぶIPプロデュース企業です。アニメ・キャラクター・ゲームなどの知的財産を中心に、ライセンス、イベント、デザイン、マーケティングを統合的に展開します。
+                    <p class="text-[#606060] text-[14px] tracking-[1.5px] font-GenJyuuGothicRegular pt-14">Arc Nova株式会社は、日本と海外を結ぶIPプロデュース企業です。アニメ・キャラクター・ゲームなどの知的財産を中心に、ライセンス、イベント、デザイン、マーケティングを統合的に展開します。
 </p>
 
                     <div class="absolute bottom-5 right-5">
