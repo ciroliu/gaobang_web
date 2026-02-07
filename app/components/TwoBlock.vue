@@ -80,7 +80,7 @@
                     <ul class="px-0 xl:px-10 mb-10">
                         <li class="mb-6 text-[32px] font-bold text-[#606060] tracking-[1.5px] font-GenJyuuGothicRegular whitespace-nowrap">精選案例</li>
                         <li class="hidden xl:flex text-[14px] text-[#606060] tracking-[1.5px] font-GenJyuuGothicRegular">高邦創意擁有豐富的展覽策劃經驗，從企劃撰寫到活動落地，我們已成功主辦多場大型動漫IP展覽及協助政府大型活動。包含許多知名國際IP，<br><br>包含Dragon Ball、ONE PIECE等，更積極攜台灣IP發展至海外。</li>
-                        <li class="flex xl:hidden text-[14px] text-[#606060] tracking-[1.5px] font-GenJyuuGothicRegular">高邦創意擁有豐富的展覽策劃經驗，<br>從企劃撰寫到活動落地，我們已成功<br>主辦多場大型動漫IP展覽及協助政府大型活動。</li>
+                        <li class="flex xl:hidden text-[14px] text-[#606060] tracking-[1.5px] font-GenJyuuGothicRegular">高邦創意擁有豐富的展覽策劃經驗，<br>從企劃撰寫到活動落地，我們已成功<br>主辦多場大型動漫IP展覽及協助政府大型活動。<br><br>包含Dragon Ball、ONE PIECE等，更積極攜<br>台灣IP發展至海外。</li>
                     </ul>
                 </div>
 
