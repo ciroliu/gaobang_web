@@ -95,12 +95,22 @@
                       <div class="flex flex-row gap-14 sm:gap-10 xl:gap-6 whitespace-nowrap items-center">
                           <!-- Slide 1 -->
                           <div class="snap-center min-w-[95%] sm:min-w-[60%] md:min-w-[50%] xl:min-w-0 h-[360px] flex justify-center items-center">
-                            <img src="/slider-5.webp" class="h-full w-auto object-contain" loading="lazy" />
+                            <img
+                              src="/slider-5.webp"
+                              class="h-full w-auto object-contain cursor-pointer"
+                              loading="lazy"
+                              @click="openZoom('/slider-5.webp')"
+                            />
                           </div>
 
                           <!-- Slide 2 -->
                           <div class="snap-center min-w-[95%] sm:min-w-[60%] md:min-w-[50%] xl:min-w-0 h-[360px] flex justify-center items-center">
-                            <img src="/slider-6.webp" class="h-full w-auto object-contain" loading="lazy" />
+                            <img
+                              src="/slider-6.webp"
+                              class="h-full w-auto object-contain cursor-pointer"
+                              loading="lazy"
+                              @click="openZoom('/slider-6.webp')"
+                            />
                           </div>
 
                           <!-- Slide 3 (with text overlay) -->
@@ -150,11 +160,23 @@
                   </div>
 
                   <div class="flex xl:hidden flex-col justify-center items-center gap-10 px-10">
+                            <!-- Slide 1 -->
                             <div class="">
-                              <img src="/slider-5.webp" loading="lazy">
+                              <img
+                                src="/slider-5.webp"
+                                loading="lazy"
+                                class="cursor-pointer"
+                                @click="openZoom('/slider-5.webp')"
+                              >
                             </div>
+                            <!-- Slide 2 -->
                             <div class="">
-                              <img src="/slider-6.webp" loading="lazy">
+                              <img
+                                src="/slider-6.webp"
+                                loading="lazy"
+                                class="cursor-pointer"
+                                @click="openZoom('/slider-6.webp')"
+                              >
                             </div>
                             <div class="relative flex justify-center items-center bg-gradient-to-r from-[#ED0081] via-[#F13630] via-[#EE783B] to-[#FFC500] h-[400px] max-w-[440px] w-full rounded-[30px]">
                               <ul class="absolute text-left px-8">
@@ -242,6 +264,29 @@
     </div>
   </Transition>
 </Teleport>
+<Teleport to="body">
+  <Transition name="modal-transition">
+    <div
+      v-if="isZoomOpen"
+      class="fixed inset-0 bg-black/70 flex items-center justify-center z-[102]"
+      @click.self="closeZoom"
+    >
+      <div class="relative max-w-[90vw] max-h-[90vh]">
+        <button
+          class="absolute -top-10 right-0 text-white text-2xl cursor-pointer"
+          @click="closeZoom"
+        >
+          ×
+        </button>
+        <img
+          :src="zoomSrc"
+          class="max-w-[90vw] max-h-[90vh] object-contain rounded-2xl shadow-2xl"
+          alt=""
+        >
+      </div>
+    </div>
+  </Transition>
+</Teleport>
 </template>
 
 <script setup>
@@ -254,6 +299,15 @@ const { $gsap, $ScrollTrigger } = useNuxtApp();
 const container = ref(null);
 const isOpen1 = ref(false);
 const isOpen2 = ref(false);
+const isZoomOpen = ref(false);
+const zoomSrc = ref('');
+
+function handleKeydown(event) {
+  if (event.key !== 'Escape') return;
+  if (isOpen1.value) closeModal1();
+  if (isOpen2.value) closeModal2();
+  if (isZoomOpen.value) closeZoom();
+}
 
 function openModal1() {
   isOpen1.value = true;
@@ -269,6 +323,16 @@ function openModal2() {
 
 function closeModal2() {
   isOpen2.value = false;
+}
+
+function openZoom(src) {
+  zoomSrc.value = src;
+  isZoomOpen.value = true;
+}
+
+function closeZoom() {
+  isZoomOpen.value = false;
+  zoomSrc.value = '';
 }
 
 // const scroller = ref(null)
@@ -297,6 +361,7 @@ function closeModal2() {
 // let ro
 
 onMounted(() => {
+  window.addEventListener('keydown', handleKeydown);
   // update()
   // scroller.value?.addEventListener('scroll', update, { passive: true })
   // window.addEventListener('resize', update)
@@ -332,6 +397,10 @@ onMounted(() => {
 //   window.removeEventListener('resize', update)
 //   ro?.disconnect()
 // })
+
+onBeforeUnmount(() => {
+  window.removeEventListener('keydown', handleKeydown);
+})
 </script>
 
 <style scoped>
