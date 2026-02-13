@@ -43,6 +43,8 @@ const copyright = ref<HTMLElement | null>(null);
 const bg_one = ref<HTMLElement | null>(null);
 
 const { $gsap, $ScrollTrigger } = useNuxtApp();
+let gsapContext: ReturnType<typeof $gsap.context> | null = null
+let loadHandler: (() => void) | null = null
 
 onMounted(() => {
   const img = logo.value as HTMLImageElement
@@ -54,87 +56,99 @@ onMounted(() => {
   if (!img || !txt || !copy || !bg) return
 
   const startGsap = () => {
-    $ScrollTrigger.matchMedia({
-      "(min-width: 368px) and (max-width: 479px)": () => {
-        $gsap.from(img, { y: 500, opacity: 0, scale: 0, duration: 0.75 })
-        $gsap.to(img, {
-          scrollTrigger: {
-            trigger: '#first-section',
-            start: 'top -80',
-            end: '7300px',
-            toggleClass: { className: 'mb-logo-to', targets: img }
-          },
-          opacity: 1,
-          scale: 1
-        })
+    gsapContext = $gsap.context(() => {
+      $ScrollTrigger.matchMedia({
+        "(min-width: 368px) and (max-width: 479px)": () => {
+          $gsap.from(img, { y: 500, opacity: 0, scale: 0, duration: 0.75 })
+          $gsap.to(img, {
+            scrollTrigger: {
+              trigger: '#first-section',
+              start: 'top -80',
+              end: '7300px',
+              toggleClass: { className: 'mb-logo-to', targets: img }
+            },
+            opacity: 1,
+            scale: 1
+          })
 
-        $gsap.from(txt, { y: 500, opacity: 0, scale: 0, delay: 1, duration: 0.5 })
-        $gsap.to(txt, {
-          scrollTrigger: {
-            trigger: '#first-section',
-            start: 'top -10',
-            end: '7300px',
-            toggleClass: { className: 'logotxt-to', targets: txt }
-          },
-          opacity: 1,
-          scale: 1
-        })
+          $gsap.from(txt, { y: 500, opacity: 0, scale: 0, delay: 1, duration: 0.5 })
+          $gsap.to(txt, {
+            scrollTrigger: {
+              trigger: '#first-section',
+              start: 'top -10',
+              end: '7300px',
+              toggleClass: { className: 'logotxt-to', targets: txt }
+            },
+            opacity: 1,
+            scale: 1
+          })
 
-        $gsap.to(copy, {
-          scrollTrigger: {
-            trigger: bg,
-            start: 'bottom bottom',
-            end: 'bottom top',
-            toggleActions: 'play none none reverse'
-          },
-          opacity: 0,
-          y: -0,
-          duration: 0.5
-        })
-      },
+          $gsap.to(copy, {
+            scrollTrigger: {
+              trigger: bg,
+              start: 'bottom bottom',
+              end: 'bottom top',
+              toggleActions: 'play none none reverse'
+            },
+            opacity: 0,
+            y: -0,
+            duration: 0.5
+          })
+        },
 
-      '(min-width: 480px)': () => {
-        $gsap.from(img, { y: 2000, opacity: 0, scale: 0, duration: 0.75 })
-        $gsap.to(img, {
-          scrollTrigger: {
-            start: 'top -80',
-            end: 'bottom top',
-            toggleClass: { className: 'logo-to', targets: img }
-          },
-          opacity: 1,
-          scale: 1
-        })
+        '(min-width: 480px)': () => {
+          $gsap.from(img, { y: 2000, opacity: 0, scale: 0, duration: 0.75 })
+          $gsap.to(img, {
+            scrollTrigger: {
+              start: 'top -80',
+              end: 'bottom top',
+              toggleClass: { className: 'logo-to', targets: img }
+            },
+            opacity: 1,
+            scale: 1
+          })
 
-        $gsap.from(txt, { y: 2000, opacity: 0, scale: 0, delay: 1, duration: 0.5 })
-        $gsap.to(txt, {
-          scrollTrigger: {
-            start: 'top -10',
-            end: 'bottom top',
-            toggleClass: { className: 'logotxt-to', targets: txt }
-          },
-          scale: 1
-        })
+          $gsap.from(txt, { y: 2000, opacity: 0, scale: 0, delay: 1, duration: 0.5 })
+          $gsap.to(txt, {
+            scrollTrigger: {
+              start: 'top -10',
+              end: 'bottom top',
+              toggleClass: { className: 'logotxt-to', targets: txt }
+            },
+            scale: 1
+          })
 
-        $gsap.to(copy, {
-          scrollTrigger: {
-            trigger: bg,
-            start: 'bottom bottom',
-            end: 'bottom top',
-            toggleActions: 'play none none reverse'
-          },
-          opacity: 0,
-          y: -0,
-          duration: 0.5
-        })
-      }
-    })
+          $gsap.to(copy, {
+            scrollTrigger: {
+              trigger: bg,
+              start: 'bottom bottom',
+              end: 'bottom top',
+              toggleActions: 'play none none reverse'
+            },
+            opacity: 0,
+            y: -0,
+            duration: 0.5
+          })
+        }
+      })
+    }, bg)
   }
 
   // 等待圖片載入完成才執行動畫
   if (img.complete) {
     startGsap()
   } else {
-    img.addEventListener('load', startGsap)
+    loadHandler = startGsap
+    img.addEventListener('load', loadHandler, { once: true })
   }
+})
+
+onBeforeUnmount(() => {
+  if (logo.value && loadHandler) {
+    logo.value.removeEventListener('load', loadHandler)
+  }
+  gsapContext?.revert()
+  gsapContext = null
+  loadHandler = null
 })
 </script>

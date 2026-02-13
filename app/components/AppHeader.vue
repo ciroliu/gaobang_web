@@ -186,6 +186,7 @@
 <script setup>
 const { locale } = useI18n();
 const { $gsap, $ScrollTrigger } = useNuxtApp();
+let gsapContext = null;
 
 const activeSection = ref(null);
 const navLinks = ref(null);
@@ -256,6 +257,7 @@ onMounted(() => {
 
   handleScroll(); 
   // GSAP 動畫
+  gsapContext = $gsap.context(() => {
   $ScrollTrigger.matchMedia({
     "(min-width: 368px) and (max-width: 479px)": () => {
       // 
@@ -337,10 +339,13 @@ onMounted(() => {
 
     },
   })
+  });
 });
 
 onUnmounted(() => {
   window.removeEventListener('scroll', handleScroll);
+  gsapContext?.revert();
+  gsapContext = null;
 });
 </script>
 

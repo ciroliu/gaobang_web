@@ -295,6 +295,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 const { $gsap, $ScrollTrigger } = useNuxtApp();
+let gsapContext = null;
 
 const container = ref(null);
 const isOpen1 = ref(false);
@@ -368,7 +369,8 @@ onMounted(() => {
   // ro = new ResizeObserver(update)
   // ro.observe(scroller.value)
 
-  $ScrollTrigger.matchMedia({
+  gsapContext = $gsap.context(() => {
+    $ScrollTrigger.matchMedia({
     "(min-width: 368px) and (max-width: 479px)": () => {
 
     },
@@ -389,7 +391,8 @@ onMounted(() => {
             });
         }
     },
-  })
+    })
+  }, container.value)
 })
 
 // onBeforeUnmount(() => {
@@ -400,6 +403,8 @@ onMounted(() => {
 
 onBeforeUnmount(() => {
   window.removeEventListener('keydown', handleKeydown);
+  gsapContext?.revert();
+  gsapContext = null;
 })
 </script>
 

@@ -75,9 +75,11 @@ gsap.registerPlugin(ScrollTrigger);
 const container = ref(null);
 
 const { $gsap, $ScrollTrigger } = useNuxtApp();
+let gsapContext = null;
 
 onMounted(() => {
-  $ScrollTrigger.matchMedia({
+  gsapContext = $gsap.context(() => {
+    $ScrollTrigger.matchMedia({
     "(min-width: 368px) and (max-width: 479px)": () => {
 
     },
@@ -98,6 +100,12 @@ onMounted(() => {
             });
         }
     },
-  })
+    })
+  }, container.value)
+})
+
+onBeforeUnmount(() => {
+  gsapContext?.revert()
+  gsapContext = null
 })
 </script>
