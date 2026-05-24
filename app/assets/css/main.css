@@ -41,7 +41,8 @@ html {
     margin-right:-95px;
     margin-top:-95px;
     width: 180px;
-    transition: ease 0.4s;
+    transition: width 0.4s ease, top 0.4s ease, right 0.4s ease, margin 0.4s ease;
+    will-change: width, top, right, margin;
 }
 .topbgtxt-to {
     -webkit-animation: topfadeOut 0.5s;

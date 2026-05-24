@@ -36,7 +36,7 @@
 
 <script setup lang="ts">
 
-const currentYear = computed(() => new Date().getFullYear());
+const currentYear = ref(new Date().getFullYear());
 const logo = ref<HTMLElement | null>(null);
 const logotxt = ref<HTMLElement | null>(null);
 const copyright = ref<HTMLElement | null>(null);
@@ -47,6 +47,7 @@ let gsapContext: ReturnType<typeof $gsap.context> | null = null
 let loadHandler: (() => void) | null = null
 
 onMounted(() => {
+  currentYear.value = new Date().getFullYear();
   const img = logo.value as HTMLImageElement
   const txt = logotxt.value
   const copy = copyright.value
@@ -59,28 +60,20 @@ onMounted(() => {
     gsapContext = $gsap.context(() => {
       $ScrollTrigger.matchMedia({
         "(min-width: 368px) and (max-width: 479px)": () => {
-          $gsap.from(img, { y: 500, opacity: 0, scale: 0, duration: 0.75 })
-          $gsap.to(img, {
-            scrollTrigger: {
-              trigger: '#first-section',
-              start: 'top -80',
-              end: '7300px',
-              toggleClass: { className: 'mb-logo-to', targets: img }
-            },
-            opacity: 1,
-            scale: 1
+          $gsap.from(img, { y: 500, opacity: 0, scale: 0, duration: 0.75, force3D: true })
+          $ScrollTrigger.create({
+            trigger: '#first-section',
+            start: 'top -80',
+            end: '7300px',
+            toggleClass: { className: 'mb-logo-to', targets: img }
           })
 
-          $gsap.from(txt, { y: 500, opacity: 0, scale: 0, delay: 1, duration: 0.5 })
-          $gsap.to(txt, {
-            scrollTrigger: {
-              trigger: '#first-section',
-              start: 'top -10',
-              end: '7300px',
-              toggleClass: { className: 'logotxt-to', targets: txt }
-            },
-            opacity: 1,
-            scale: 1
+          $gsap.from(txt, { y: 500, opacity: 0, scale: 0, delay: 1, duration: 0.5, force3D: true })
+          $ScrollTrigger.create({
+            trigger: '#first-section',
+            start: 'top -10',
+            end: '7300px',
+            toggleClass: { className: 'logotxt-to', targets: txt }
           })
 
           $gsap.to(copy, {
@@ -92,30 +85,26 @@ onMounted(() => {
             },
             opacity: 0,
             y: -0,
-            duration: 0.5
+            duration: 0.5,
+            force3D: true
           })
         },
 
         '(min-width: 480px)': () => {
-          $gsap.from(img, { y: 2000, opacity: 0, scale: 0, duration: 0.75 })
-          $gsap.to(img, {
-            scrollTrigger: {
-              start: 'top -80',
-              end: 'bottom top',
-              toggleClass: { className: 'logo-to', targets: img }
-            },
-            opacity: 1,
-            scale: 1
+          $gsap.from(img, { y: 2000, opacity: 0, scale: 0, duration: 0.75, force3D: true })
+          $ScrollTrigger.create({
+            trigger: '#first-section',
+            start: 'top -80',
+            end: 'bottom top',
+            toggleClass: { className: 'logo-to', targets: img }
           })
 
-          $gsap.from(txt, { y: 2000, opacity: 0, scale: 0, delay: 1, duration: 0.5 })
-          $gsap.to(txt, {
-            scrollTrigger: {
-              start: 'top -10',
-              end: 'bottom top',
-              toggleClass: { className: 'logotxt-to', targets: txt }
-            },
-            scale: 1
+          $gsap.from(txt, { y: 2000, opacity: 0, scale: 0, delay: 1, duration: 0.5, force3D: true })
+          $ScrollTrigger.create({
+            trigger: '#first-section',
+            start: 'top -10',
+            end: 'bottom top',
+            toggleClass: { className: 'logotxt-to', targets: txt }
           })
 
           $gsap.to(copy, {
@@ -127,7 +116,8 @@ onMounted(() => {
             },
             opacity: 0,
             y: -0,
-            duration: 0.5
+            duration: 0.5,
+            force3D: true
           })
         }
       })

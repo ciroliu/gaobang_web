@@ -136,7 +136,7 @@
                 </ul>
             </div>
             <div class="flex-1 text-[12px] text-center tracking-[1.5px] font-GenJyuuGothicRegular">台北辦公室：台北市大同區市民大道一段209號12樓</div>
-            <div class="flex-1 text-[10px] text-center tracking-[1.5px] font-GenJyuuGothicRegular">Copyright © 2025 GAO BANG CREATIVITY All Rights Reserved</div>
+            <div class="flex-1 text-[10px] text-center tracking-[1.5px] font-GenJyuuGothicRegular">Copyright © {{ currentYear }} GAO BANG CREATIVITY All Rights Reserved</div>
         </div>
     </footer>
     <footer class="flex xl:hidden w-full absolute bottom-0 h-[240px] bg-[#242870] flex justify-center z-20">
@@ -157,7 +157,7 @@
             </div>
             <div class="text-[10px] text-center tracking-[1.25px] font-GenJyuuGothicRegular">台北辦公室：台北市大同區市民大道一段209號12樓</div>
             <hr class="bg-white h-[1px] w-full my-6">
-            <div class="text-[10px] text-center tracking-[1.25px] font-GenJyuuGothicRegular">Copyright © 2025 GAO BANG CREATIVITY All Rights Reserved</div>
+            <div class="text-[10px] text-center tracking-[1.25px] font-GenJyuuGothicRegular">Copyright © {{ currentYear }} GAO BANG CREATIVITY All Rights Reserved</div>
         </div>
     </footer>
     </section>
@@ -165,6 +165,12 @@
 
 <script setup>
     import { toast } from 'vue3-toastify';
+
+    const currentYear = ref(new Date().getFullYear());
+
+    onMounted(() => {
+        currentYear.value = new Date().getFullYear();
+    });
 
     const isSubmitting = ref(false);
 
